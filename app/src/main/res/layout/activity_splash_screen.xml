@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".splashScreen"
-    android:background="@drawable/ic_launcher_background"
+    android:background="#F0F0F0"
     >
 
 
@@ -16,8 +16,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="62dp"
-        android:layout_marginBottom="401dp" />
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="410dp"
+        android:background="#000" />
 
     <TextView
         android:id="@+id/textView"
