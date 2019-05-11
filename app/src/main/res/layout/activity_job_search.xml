@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".jobSearch">
 
+    <!-- -->
 
     <android.support.design.widget.BottomNavigationView
     android:layout_width="match_parent"
@@ -13,7 +14,8 @@
     android:layout_alignParentBottom="true"
     android:layout_marginBottom="0dp"
         android:background="#E0F3F6"
-    >
+      android:animateLayoutChanges="true"
+        >
    <ImageView
        android:layout_width="50dp"
        android:layout_height="20dp"
@@ -21,11 +23,12 @@
        android:layout_marginLeft="20dp"
        android:layout_marginTop="10dp"
        />
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="20dp"
-            android:src="@drawable/jobs"
             android:layout_marginTop="10dp"
+            android:src="@drawable/jobs"
             />
 
 <ImageView
