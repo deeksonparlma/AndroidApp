@@ -12,30 +12,29 @@
     android:layout_height="40dp"
     android:layout_alignParentBottom="true"
     android:layout_marginBottom="0dp"
-    android:background="@color/colorPrimary"
+        android:background="#E0F3F6"
     >
-    <TextView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:text="Home"
-    android:textSize="20dp"
-    android:layout_marginLeft="30dp"
+   <ImageView
+       android:layout_width="50dp"
+       android:layout_height="20dp"
+       android:src="@drawable/home"
+       android:layout_marginLeft="20dp"
+       android:layout_marginTop="10dp"
+       />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:src="@drawable/jobs"
+            android:layout_marginTop="10dp"
+            />
+
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="20dp"
+    android:src="@drawable/chat"
+    android:layout_marginLeft="260dp"
+    android:layout_marginTop="10dp"
     />
 
-    <TextView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:text="Jobs"
-    android:textSize="20dp"
-    android:layout_marginLeft="150dp"
-    />
-
-    <TextView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:text="Chat"
-    android:textSize="20dp"
-    android:layout_marginLeft="290dp"
-    />
     </android.support.design.widget.BottomNavigationView>
 </RelativeLayout>

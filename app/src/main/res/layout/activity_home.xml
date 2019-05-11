@@ -36,8 +36,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="189dp"
-        android:layout_marginBottom="246dp"
+        android:layout_marginEnd="185dp"
+        android:layout_marginBottom="253dp"
         android:background="#CBF1B3"
         android:text="Skip" />
 
