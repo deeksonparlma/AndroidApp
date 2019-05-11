@@ -13,10 +13,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".jobSearch"></activity>
+
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-6291199528234939~3659960798"/>
-        <activity android:name=".HomeActivity"></activity>
+            android:value="ca-app-pub-6291199528234939~3659960798" />
+
+        <activity android:name=".HomeActivity" />
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login" />
