@@ -26,11 +26,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="95dp"
-        android:layout_marginBottom="475dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="488dp"
+        android:width="300dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="User name" />
+        android:hint="User name"
+        android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/editText2"
@@ -38,8 +39,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="93dp"
-        android:layout_marginBottom="372dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="380dp"
+        android:width="300dp"
         android:ems="10"
         android:hint="password"
         android:inputType="textPassword" />
@@ -50,8 +52,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="94dp"
-        android:layout_marginBottom="424dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="436dp"
+        android:width="300dp"
         android:ems="10"
         android:hint="Email"
         android:inputType="textEmailAddress" />
@@ -63,12 +66,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="93dp"
-        android:layout_marginBottom="321dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="325dp"
+        android:width="300dp"
         android:ems="10"
-        android:inputType="textPassword"
         android:hint="Re-enter password"
-        />
+        android:inputType="textPassword" />
 
     <EditText
         android:id="@+id/editText5"
@@ -76,8 +79,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="96dp"
-        android:layout_marginBottom="261dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="268dp"
+        android:width="300dp"
         android:ems="10"
         android:hint="Telephone number"
         android:inputType="phone" />

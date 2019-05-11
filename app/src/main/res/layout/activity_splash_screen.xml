@@ -8,18 +8,26 @@
     android:background="#F0F0F0"
     >
 
-
-
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="182dp"
-        android:layout_marginBottom="364dp"
-        android:text="Loading .." />
+        android:layout_marginEnd="106dp"
+        android:layout_marginBottom="290dp"
+        android:text="Loading .."
+        android:textSize="40sp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="170dp"
+        android:layout_marginBottom="449dp" />
 
 
 </RelativeLayout>
