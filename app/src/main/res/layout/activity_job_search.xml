@@ -25,9 +25,11 @@
        />
 
         <ImageView
-            android:layout_width="wrap_content"
+            android:id="@+id/jobs"
+            android:layout_width="100dp"
             android:layout_height="20dp"
             android:layout_marginTop="10dp"
+            android:layout_marginLeft="150dp"
             android:src="@drawable/jobs"
             />
 

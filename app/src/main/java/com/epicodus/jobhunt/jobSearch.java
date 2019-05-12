@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -12,6 +13,7 @@ import butterknife.ButterKnife;
 public class jobSearch extends AppCompatActivity implements View.OnClickListener {
 @BindView(R.id.button6) Button mCompany;
 @BindView(R.id.button7) Button mJobName;
+@BindView(R.id.jobs) ImageView mJobs;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,18 +21,25 @@ public class jobSearch extends AppCompatActivity implements View.OnClickListener
         ButterKnife.bind(this);
         mCompany.setOnClickListener(this);
         mJobName.setOnClickListener(this);
+        mJobs.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         if(v == mCompany){
             Intent intent = new Intent(jobSearch.this,searchByCompany.class);
-            startActivity(intent);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            startActivityForResult(intent, 0);
         }
         else if (v == mJobName){
             Intent intent = new Intent(jobSearch.this,searchByJob.class);
-            startActivity(intent);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            startActivityForResult(intent, 0);
         }
-
+        else if (v == mJobs){
+            Intent intent = new Intent(jobSearch.this,displayAllJobs.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            startActivityForResult(intent, 0);
+        }
     }
 }

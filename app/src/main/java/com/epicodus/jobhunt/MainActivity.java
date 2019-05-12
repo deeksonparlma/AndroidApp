@@ -25,11 +25,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         if (v == msignupButton) {
             Intent intent = new Intent(MainActivity.this, signUp.class);
-            startActivity(intent);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            startActivityForResult(intent, 0);
         }
         else if(v == mloginButton){
             Intent intent = new Intent(MainActivity.this,LoginActivity.class);
-            startActivity(intent);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            startActivityForResult(intent, 0);
         }
     }
 }

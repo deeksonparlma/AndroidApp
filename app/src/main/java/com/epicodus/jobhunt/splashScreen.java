@@ -16,7 +16,8 @@ public class splashScreen extends AppCompatActivity {
                     @Override
                     public void run(){
                         Intent intent = new Intent(getApplicationContext() , MainActivity.class);
-                        startActivity(intent);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                        startActivityForResult(intent, 0);
                         finish();
                     }
                 },1200);

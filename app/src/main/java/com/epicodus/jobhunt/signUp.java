@@ -28,7 +28,8 @@ public class signUp extends AppCompatActivity implements View.OnClickListener{
             String username = mUsername.getText().toString();
             Intent intent = new Intent(signUp.this,HomeActivity.class);
             intent.putExtra("username",username);
-            startActivity(intent);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            startActivityForResult(intent, 0);
         }
     }
 }
