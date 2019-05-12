@@ -13,19 +13,19 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="142dp"
-        android:layout_marginBottom="661dp"
+        android:layout_marginEnd="94dp"
+        android:layout_marginBottom="585dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="Enter job name" />
+        android:hint="Enter job name"
+        android:inputType="textPersonName" />
 
     <SearchView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="96dp"
-        android:layout_marginBottom="659dp" />
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="584dp" />
 
     <android.support.design.widget.BottomNavigationView
         android:layout_width="match_parent"
