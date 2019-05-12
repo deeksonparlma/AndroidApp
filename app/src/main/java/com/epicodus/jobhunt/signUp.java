@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -26,6 +27,7 @@ public class signUp extends AppCompatActivity implements View.OnClickListener{
     public void onClick(View v) {
         if(v == mLandScreen){
             String username = mUsername.getText().toString();
+            Toast.makeText(signUp.this, "Sign up successful", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(signUp.this,HomeActivity.class);
             intent.putExtra("username",username);
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
