@@ -26,6 +26,7 @@
         android:animateLayoutChanges="true"
         >
         <ImageView
+            android:id="@+id/home"
             android:layout_width="100dp"
             android:layout_height="20dp"
             android:src="@drawable/home"
@@ -34,20 +35,22 @@
             />
 
         <ImageView
-            android:layout_width="wrap_content"
+            android:id="@+id/jobs"
+            android:layout_width="100dp"
             android:layout_height="20dp"
             android:layout_marginTop="10dp"
+            android:layout_marginLeft="150dp"
             android:src="@drawable/jobs"
             />
 
         <ImageView
+            android:id="@+id/chat"
             android:layout_width="wrap_content"
             android:layout_height="20dp"
             android:src="@drawable/chat"
             android:layout_marginLeft="260dp"
             android:layout_marginTop="10dp"
             />
-
     </android.support.design.widget.BottomNavigationView>
 
 </RelativeLayout>
