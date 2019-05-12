@@ -6,29 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".chatActivity">
 
-    <AnalogClock
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="48dp"
-        android:layout_marginBottom="582dp" />
-
-    <Chronometer
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="202dp"
-        android:layout_marginBottom="572dp" />
+    <!--<AnalogClock-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_marginEnd="37dp"-->
+        <!--android:layout_marginBottom="573dp" />-->
 
     <QuickContactBadge
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="333dp"
-        android:layout_marginBottom="584dp" />
+        android:layout_marginEnd="278dp"
+        android:layout_marginBottom="554dp"
+        android:src="@drawable/jobs" />
 
     <android.support.design.widget.BottomNavigationView
         android:layout_width="match_parent"
@@ -68,8 +61,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="169dp"
-        android:layout_marginBottom="601dp"
+        android:layout_marginEnd="128dp"
+        android:layout_marginBottom="587dp"
         android:text="Job Hunt customer Care" />
 
     <TextView
@@ -78,9 +71,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="257dp"
-        android:layout_marginBottom="571dp"
-        android:text="Online at " />
+        android:layout_marginEnd="219dp"
+        android:layout_marginBottom="570dp"
+        android:textColor="@color/colorAccent"
+        android:text="Online" />
 
     <EditText
         android:id="@+id/editText7"
@@ -128,5 +122,13 @@
         android:text="send"
         android:textAllCaps="false" />
 
-
+    <!--<TimePicker-->
+        <!--android:layout_width="278dp"-->
+        <!--android:layout_height="94dp"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_marginEnd="16dp"-->
+        <!--android:layout_marginBottom="477dp"-->
+        <!--android:headerBackground="#000"-->
+        <!--android:visibility="visible"></TimePicker>-->
 </RelativeLayout>
