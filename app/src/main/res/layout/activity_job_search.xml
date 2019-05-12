@@ -34,6 +34,7 @@
             />
 
 <ImageView
+    android:id="@+id/chat"
     android:layout_width="wrap_content"
     android:layout_height="20dp"
     android:src="@drawable/chat"
@@ -53,7 +54,9 @@
         android:layout_marginEnd="187dp"
         android:layout_marginBottom="75dp"
         android:text="By company"
-        android:textAllCaps="false" />
+        android:textAllCaps="false"
+        android:background="#BDCAF8"
+        />
 
     <Button
         android:id="@+id/button7"
@@ -64,7 +67,9 @@
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="77dp"
         android:text="By job"
-        android:textAllCaps="false" />
+        android:textAllCaps="false"
+        android:background="#BDCAF8"
+        />
 
     <SearchView
         android:layout_width="wrap_content"
