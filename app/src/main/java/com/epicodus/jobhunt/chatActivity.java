@@ -28,7 +28,7 @@ public class chatActivity extends AppCompatActivity implements View.OnClickListe
         if(v == mSend){
             String message =mTyping.getText().toString();
             mMessage.setText(message);
-            mTyping.clearComposingText();
+            mTyping.setText("");
         }
     }
 }

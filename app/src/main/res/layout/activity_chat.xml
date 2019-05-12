@@ -86,7 +86,7 @@
         android:layout_marginBottom="48dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Enter message" />
+        android:hint="Enter message" />
 
     <TextView
         android:id="@+id/textView8"
@@ -105,8 +105,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="199dp"
-        android:layout_marginBottom="355dp"
+        android:layout_marginEnd="206dp"
+        android:layout_marginBottom="361dp"
         android:text="A.I response"
         android:textSize="19dp" />
 
@@ -121,6 +121,17 @@
         android:background="#E0F3F6"
         android:text="send"
         android:textAllCaps="false" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="95dp"
+        android:layout_marginBottom="414dp"
+        android:text="Welcome to our customer care center"
+        android:textSize="15sp" />
 
     <!--<TimePicker-->
         <!--android:layout_width="278dp"-->
