@@ -35,6 +35,11 @@ public class searchByCompany extends AppCompatActivity implements View.OnClickLi
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
             startActivityForResult(intent, 0);
         }
+        else if (v == mChat){
+            Intent intent = new Intent(searchByCompany.this,chatActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            startActivityForResult(intent, 0);
+        }
     }
 }
 

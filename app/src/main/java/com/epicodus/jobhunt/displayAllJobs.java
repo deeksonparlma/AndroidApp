@@ -12,6 +12,7 @@ import butterknife.ButterKnife;
 public class displayAllJobs extends AppCompatActivity implements View.OnClickListener{
     @BindView(R.id.home) ImageView mHome;
     @BindView(R.id.jobs) ImageView mJobs;
+    @BindView(R.id.chat) ImageView mChat;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +20,7 @@ public class displayAllJobs extends AppCompatActivity implements View.OnClickLis
         ButterKnife.bind(this);
         mHome.setOnClickListener(this);
         mJobs.setOnClickListener(this);
+        mChat.setOnClickListener(this);
     }
 
     @Override
@@ -30,6 +32,11 @@ public class displayAllJobs extends AppCompatActivity implements View.OnClickLis
         }
         else if(v == mJobs){
             Intent intent = new Intent(displayAllJobs.this,displayAllJobs.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            startActivityForResult(intent, 0);
+        }
+        else if (v == mChat){
+            Intent intent = new Intent(displayAllJobs.this,chatActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
             startActivityForResult(intent, 0);
         }
