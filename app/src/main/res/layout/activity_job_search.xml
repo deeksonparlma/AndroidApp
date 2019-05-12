@@ -17,7 +17,7 @@
       android:animateLayoutChanges="true"
         >
    <ImageView
-       android:layout_width="50dp"
+       android:layout_width="100dp"
        android:layout_height="20dp"
        android:src="@drawable/home"
        android:layout_marginLeft="20dp"
@@ -40,4 +40,54 @@
     />
 
     </android.support.design.widget.BottomNavigationView>
+
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="187dp"
+        android:layout_marginBottom="75dp"
+        android:text="By company"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="77dp"
+        android:text="By job"
+        android:textAllCaps="false" />
+
+    <SearchView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="295dp"
+        android:layout_marginBottom="75dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="136dp"
+        android:layout_marginBottom="84dp"
+        android:text="or"
+        android:textAllCaps="false"
+        android:textSize="25sp" />
+
+    <!--<VideoView-->
+        <!--android:id="@+id/videoView"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--/>-->
+
 </RelativeLayout>
