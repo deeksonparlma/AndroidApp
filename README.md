@@ -1,4 +1,6 @@
 ## Job Hunt
+
+ ![Build Status](https://img.shields.io/badge/Android-project-brightgreen.svg)
 # Description
  This is an android APP that enables a user to search for job vacancies in any company or job title around the globe with ease
 
@@ -36,4 +38,3 @@ sdk install java
  * XML
  * Roboelectric
  * Android
- [![Build Status](https://img.shields.io/badge/Android-project-brightgreen.svg)
