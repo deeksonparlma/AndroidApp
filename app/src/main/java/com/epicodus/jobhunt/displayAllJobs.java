@@ -16,12 +16,12 @@ public class displayAllJobs extends AppCompatActivity implements View.OnClickLis
     GridView gridView;
 
     String[] companies = new String[]{
-            "Safaricom ltd" , "Moringa School"
+            "Safaricom ltd" , "Moringa School","Google"
     };
     String[] vacancies = new String[]{
-      "200" , "500"
+      "Software Developer" , "Technical Mentor","Data Scientist"
     };
-    @BindView(R.id.textView10) ListView mjobsInCompanies;
+    @BindView(R.id.textView10) GridView mjobsInCompanies;
     @BindView(R.id.home) ImageView mHome;
     @BindView(R.id.jobs) ImageView mJobs;
     @BindView(R.id.chat) ImageView mChat;
@@ -33,8 +33,10 @@ public class displayAllJobs extends AppCompatActivity implements View.OnClickLis
         mHome.setOnClickListener(this);
         mJobs.setOnClickListener(this);
         mChat.setOnClickListener(this);
-        customArrayAdapter adapter = new customArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, companies,vacancies);
-        mjobsInCompanies.setAdapter(adapter);
+//        customArrayAdapter adapter = new customArrayAdapter(this, android.R.layout.simple_list_item_1, companies,vacancies);
+//        mjobsInCompanies.setAdapter(adapter);
+//        gridView = (GridView) findViewById(R.id.textView10);
+        mjobsInCompanies.setAdapter(new customArrayAdapter(this,companies,vacancies));
     }
 
     @Override
