@@ -2,6 +2,7 @@
 
  ![](https://img.shields.io/badge/Android-project-brightgreen.svg)
  ![](https://img.shields.io/badge/Language-Java%20-orange.svg)
+ ![](https://img.shields.io/badge/Tests-Roboelectric-blue.svg)
 # Description
  This is an android APP that enables a user to search for job vacancies in any company or job title around the globe with ease
 
