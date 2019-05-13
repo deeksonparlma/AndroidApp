@@ -32,6 +32,7 @@
         android:background="#E0F3F6">
 
         <ImageView
+            android:id="@+id/home"
             android:layout_width="100dp"
             android:layout_height="20dp"
             android:layout_marginLeft="20dp"
@@ -47,6 +48,7 @@
             android:src="@drawable/jobs" />
 
         <ImageView
+            android:id="@+id/chat"
             android:layout_width="wrap_content"
             android:layout_height="20dp"
             android:layout_marginLeft="260dp"
