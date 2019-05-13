@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:animateLayoutChanges="true"
-    android:background="@drawable/signup"
+    android:background="@drawable/choice"
     >
 
     <ImageView
@@ -82,7 +82,15 @@
         android:layout_marginBottom="65dp"
         app:srcCompat="@drawable/instagram" />
 
-
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="113dp"
+        android:layout_marginBottom="395dp"
+        app:srcCompat="@drawable/icon" />
 
 
 </RelativeLayout>
