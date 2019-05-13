@@ -12,6 +12,10 @@ import butterknife.ButterKnife;
 
 public class displayAllJobs extends AppCompatActivity implements View.OnClickListener{
     GridView gridView;
+
+    String[] companies = new String[]{
+            "Safaricom ltd" , "Moringa School"
+    }
     @BindView(R.id.home) ImageView mHome;
     @BindView(R.id.jobs) ImageView mJobs;
     @BindView(R.id.chat) ImageView mChat;
