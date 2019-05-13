@@ -47,37 +47,28 @@
 
     <Button
         android:id="@+id/button6"
-        android:layout_width="wrap_content"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="187dp"
-        android:layout_marginBottom="75dp"
+        android:layout_marginEnd="211dp"
+        android:layout_marginBottom="71dp"
+        android:background="@drawable/round_button"
         android:text="By company"
-        android:textAllCaps="false"
-        android:background="#BDCAF8"
-        />
+        android:textAllCaps="false" />
 
     <Button
         android:id="@+id/button7"
-        android:layout_width="wrap_content"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="77dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="72dp"
+        android:background="@drawable/round_button"
         android:text="By job"
-        android:textAllCaps="false"
-        android:background="#BDCAF8"
-        />
+        android:textAllCaps="false" />
 
-    <SearchView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="295dp"
-        android:layout_marginBottom="75dp" />
 
     <TextView
         android:id="@+id/textView4"
@@ -85,8 +76,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="136dp"
-        android:layout_marginBottom="84dp"
+        android:layout_marginEnd="188dp"
+        android:layout_marginBottom="86dp"
         android:text="or"
         android:textAllCaps="false"
         android:textSize="25sp" />

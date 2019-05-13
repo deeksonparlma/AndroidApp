@@ -4,8 +4,53 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".signUp">
+    tools:context=".signUp"
+    android:background="@drawable/signup">
 
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="330dp"
+        android:layout_marginBottom="285dp"
+        android:elevation="5dp"
+        app:srcCompat="@drawable/phone" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="20dp"
+        android:layout_height="20sp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="333dp"
+        android:layout_marginBottom="390dp"
+        android:elevation="5dp"
+        app:srcCompat="@drawable/password" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="20dp"
+        android:layout_height="20sp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="331dp"
+        android:layout_marginBottom="340dp"
+        android:elevation="5dp"
+        app:srcCompat="@drawable/password" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="20dp"
+        android:layout_height="20sp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="336dp"
+        android:layout_marginBottom="445dp"
+        android:elevation="5dp"
+        app:srcCompat="@drawable/email" />
 
     <TextView
         android:id="@+id/textView2"
@@ -22,69 +67,79 @@
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="350dp"
+        android:layout_height="45dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="35dp"
-        android:layout_marginBottom="488dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="484dp"
         android:width="300dp"
+        android:background="@drawable/edittext"
         android:ems="10"
         android:hint="User name"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:paddingStart="30dp" />
 
     <EditText
         android:id="@+id/editText2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="350dp"
+        android:layout_height="45dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="37dp"
-        android:layout_marginBottom="380dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="379dp"
         android:width="300dp"
+        android:background="@drawable/edittext"
         android:ems="10"
         android:hint="password"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:paddingStart="30dp" />
 
     <EditText
         android:id="@+id/editText3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="350dp"
+        android:layout_height="45dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="436dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="431dp"
         android:width="300dp"
+        android:background="@drawable/edittext"
         android:ems="10"
         android:hint="Email"
-        android:inputType="textEmailAddress" />
+        android:inputType="textEmailAddress"
+        android:paddingStart="30dp" />
 
 
     <EditText
         android:id="@+id/editText4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="350dp"
+        android:layout_height="45dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="38dp"
-        android:layout_marginBottom="325dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="330dp"
         android:width="300dp"
+        android:background="@drawable/edittext"
         android:ems="10"
         android:hint="Re-enter password"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:paddingStart="30dp" />
 
     <EditText
         android:id="@+id/editText5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="350dp"
+        android:layout_height="45dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="37dp"
-        android:layout_marginBottom="268dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="273dp"
         android:width="300dp"
+        android:background="@drawable/edittext"
         android:ems="10"
         android:hint="Telephone number"
-        android:inputType="phone" />
+        android:inputType="phone"
+        android:paddingStart="30dp" />
 
     <Button
         android:id="@+id/button3"
@@ -94,6 +149,17 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="155dp"
         android:layout_marginBottom="200dp"
-        android:background="#C0C6DB"
+        android:background="@drawable/round_button"
         android:text="Sign up" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="20dp"
+        android:layout_height="20sp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="338dp"
+        android:layout_marginBottom="498dp"
+        android:elevation="5dp"
+        app:srcCompat="@drawable/user" />
 </RelativeLayout>
