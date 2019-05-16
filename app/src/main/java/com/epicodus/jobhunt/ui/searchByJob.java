@@ -23,6 +23,7 @@ public class searchByJob extends AppCompatActivity implements View.OnClickListen
     public static final String TAG = searchByJob.class.getSimpleName();
     @BindView(R.id.home)
     ImageView mHome;
+    @BindView(R.id.editText9) EditText mDesc;
     @BindView(R.id.jobs)
     ImageView mJobs;
     @BindView(R.id.chat)
@@ -60,12 +61,13 @@ public class searchByJob extends AppCompatActivity implements View.OnClickListen
         }
         else if(v == mSearch){
             String jobs = mType.getText().toString();
-            getJobs(jobs);
+            String descending = mDesc.getText().toString();
+            getJobs(jobs,descending);
         }
     }
-    private void getJobs(String jobs){
+    private void getJobs(String jobs,String descending){
         final MuseService museService = new MuseService();
-        museService.findJobs(jobs, new Callback() {
+        museService.findJobs(jobs, descending, new Callback() {
 
             @Override
             public void onFailure(Call call, IOException e) {

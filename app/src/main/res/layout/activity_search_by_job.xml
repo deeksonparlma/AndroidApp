@@ -68,4 +68,16 @@
         android:layout_marginBottom="600dp"
         app:srcCompat="@drawable/search" />
 
+    <EditText
+        android:id="@+id/editText9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="94dp"
+        android:layout_marginBottom="535dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        />
+
 </RelativeLayout>
