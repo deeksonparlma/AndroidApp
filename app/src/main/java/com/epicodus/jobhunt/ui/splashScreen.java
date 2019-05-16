@@ -1,9 +1,11 @@
-package com.epicodus.jobhunt;
+package com.epicodus.jobhunt.ui;
 
 import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.epicodus.jobhunt.R;
 
 public class splashScreen extends AppCompatActivity {
 

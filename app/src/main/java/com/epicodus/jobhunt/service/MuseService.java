@@ -1,4 +1,6 @@
-package com.epicodus.jobhunt;
+package com.epicodus.jobhunt.service;
+
+import com.epicodus.jobhunt.constants.Constants;
 
 import javax.security.auth.callback.Callback;
 

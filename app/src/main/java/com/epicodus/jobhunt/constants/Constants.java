@@ -1,4 +1,6 @@
-package com.epicodus.jobhunt;
+package com.epicodus.jobhunt.constants;
+
+import com.epicodus.jobhunt.BuildConfig;
 
 public class Constants {
     public static final String MUSE_TOKEN = BuildConfig.MUSE_TOKEN;

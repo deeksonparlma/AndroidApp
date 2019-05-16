@@ -1,4 +1,4 @@
-package com.epicodus.jobhunt;
+package com.epicodus.jobhunt.ui;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.google.android.gms.ads.AdRequest;
+import com.epicodus.jobhunt.R;
 import com.google.android.gms.ads.MobileAds;
 
 import butterknife.BindView;

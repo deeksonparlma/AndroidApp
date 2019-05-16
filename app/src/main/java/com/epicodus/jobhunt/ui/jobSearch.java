@@ -1,45 +1,55 @@
-package com.epicodus.jobhunt;
+package com.epicodus.jobhunt.ui;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
+
+import com.epicodus.jobhunt.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class searchByCompany extends AppCompatActivity implements View.OnClickListener {
-@BindView(R.id.home) ImageView mHome;
+public class jobSearch extends AppCompatActivity implements View.OnClickListener {
+@BindView(R.id.button6) Button mCompany;
+@BindView(R.id.button7) Button mJobName;
 @BindView(R.id.jobs) ImageView mJobs;
 @BindView(R.id.chat) ImageView mChat;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_search_by_company);
+        setContentView(R.layout.activity_job_search);
         ButterKnife.bind(this);
-        mHome.setOnClickListener(this);
+
+        mCompany.setOnClickListener(this);
+        mJobName.setOnClickListener(this);
         mJobs.setOnClickListener(this);
         mChat.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        if(v == mHome){
-            Intent intent = new Intent(searchByCompany.this,jobSearch.class);
+        if(v == mCompany){
+            Intent intent = new Intent(jobSearch.this,searchByCompany.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
             startActivityForResult(intent, 0);
         }
-        else if(v == mJobs){
-            Intent intent = new Intent(searchByCompany.this,displayAllJobs.class);
+        else if (v == mJobName){
+            Intent intent = new Intent(jobSearch.this,searchByJob.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            startActivityForResult(intent, 0);
+        }
+        else if (v == mJobs){
+            Intent intent = new Intent(jobSearch.this,displayAllJobs.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
             startActivityForResult(intent, 0);
         }
         else if (v == mChat){
-            Intent intent = new Intent(searchByCompany.this,chatActivity.class);
+            Intent intent = new Intent(jobSearch.this,chatActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
             startActivityForResult(intent, 0);
         }
     }
 }
-

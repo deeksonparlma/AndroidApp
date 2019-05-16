@@ -1,13 +1,14 @@
-package com.epicodus.jobhunt;
+package com.epicodus.jobhunt.ui;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
-import android.widget.ListView;
+
+import com.epicodus.jobhunt.R;
+import com.epicodus.jobhunt.adapter.customArrayAdapter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
