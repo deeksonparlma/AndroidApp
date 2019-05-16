@@ -12,20 +12,21 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    @BindView(R.id.button) Button msignupButton;
+    @BindView(R.id.buttonn) Button msignUpButton;
     @BindView(R.id.button2) Button mloginButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        msignupButton.setOnClickListener(this);
+
+        msignUpButton.setOnClickListener(this);
         mloginButton.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        if (v == msignupButton) {
+        if (v == msignUpButton) {
             Intent intent = new Intent(MainActivity.this, signUp.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
             startActivityForResult(intent, 0);

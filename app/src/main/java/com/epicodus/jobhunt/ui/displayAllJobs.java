@@ -3,17 +3,25 @@ package com.epicodus.jobhunt.ui;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.GridView;
 import android.widget.ImageView;
 
 import com.epicodus.jobhunt.R;
 import com.epicodus.jobhunt.adapter.customArrayAdapter;
+import com.epicodus.jobhunt.service.MuseService;
+
+import java.io.IOException;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.Response;
 
 public class displayAllJobs extends AppCompatActivity implements View.OnClickListener{
+//    public static final String TAG = displayAllJobs.class.getSimpleName();
     GridView gridView;
 
     String[] companies = new String[]{
