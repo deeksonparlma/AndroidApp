@@ -63,6 +63,8 @@ public class searchByJob extends AppCompatActivity implements View.OnClickListen
             String jobs = mType.getText().toString();
             String descending = mDesc.getText().toString();
             getJobs(jobs,descending);
+            mType.setText("");
+            mDesc.setText("");
         }
     }
     private void getJobs(String jobs,String descending){

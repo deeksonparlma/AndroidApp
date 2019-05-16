@@ -16,7 +16,7 @@
         android:layout_marginEnd="94dp"
         android:layout_marginBottom="585dp"
         android:ems="10"
-        android:hint="Enter job name"
+        android:hint="number of pages to display"
         android:inputType="textPersonName" />
 
 
@@ -77,7 +77,7 @@
         android:layout_marginEnd="94dp"
         android:layout_marginBottom="535dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        />
+        android:hint="true/false"
+        android:inputType="textPersonName" />
 
 </RelativeLayout>
