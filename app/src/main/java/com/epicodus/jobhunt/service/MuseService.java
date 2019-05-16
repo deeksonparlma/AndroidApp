@@ -31,6 +31,6 @@ public class MuseService {
         call.enqueue(callback);
     }
 public ArrayList<JobModel> processResults(Response response){
-
+    ArrayList<JobModel> jobs = new ArrayList<>();
 }
 }
