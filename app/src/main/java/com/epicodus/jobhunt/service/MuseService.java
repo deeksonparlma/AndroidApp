@@ -3,6 +3,11 @@ package com.epicodus.jobhunt.service;
 import com.epicodus.jobhunt.constants.Constants;
 import com.epicodus.jobhunt.model.JobModel;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
 import java.util.ArrayList;
 
 import okhttp3.Callback;
@@ -32,5 +37,30 @@ public class MuseService {
     }
 public ArrayList<JobModel> processResults(Response response){
     ArrayList<JobModel> jobs = new ArrayList<>();
-}
+    try{
+        String jsonData = response.body().string();
+        JSONObject museJSON = new JSONObject(jsonData);
+        JSONArray resultsJSON = museJSON.getJSONArray("results");
+        if (response.isSuccessful()){
+            for (int i = 0; i < resultsJSON.length(); i++){
+                JSONObject jobJSON = resultsJSON.getJSONObject(i);
+                String contents = jobJSON.getString("contents"); //
+                String tags = jobJSON.getString("tags");
+                String refs = jobJSON.getString("refs"); //
+                String levels = jobJSON.getString("levels");
+                String locations = jobJSON.getString("locations");
+                String categories = jobJSON.getString("categories");
+                String company = jobJSON.getString("company");
+
+                JobModel jobsInstance = new JobModel(company,locations,refs,contents,categories,tags,levels);
+                jobs.add(jobsInstance);
+            }
+        }
+    } catch (IOException e) {
+        e.printStackTrace();
+    } catch (JSONException e) {
+        e.printStackTrace();
+    }
+    return jobs;
+    }
 }

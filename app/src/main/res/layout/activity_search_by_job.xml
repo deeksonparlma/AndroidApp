@@ -13,10 +13,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="94dp"
-        android:layout_marginBottom="585dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginBottom="587dp"
         android:ems="10"
-        android:hint="number of pages to display"
+        android:hint="no. of pages to display"
         android:inputType="textPersonName" />
 
 
@@ -78,6 +78,15 @@
         android:layout_marginBottom="535dp"
         android:ems="10"
         android:hint="true/false"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:visibility="invisible"
+        android:text="true"/>
+    <ListView
+        android:id="@+id/jobsList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp">
+
+    </ListView>
 
 </RelativeLayout>

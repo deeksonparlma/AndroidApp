@@ -6,13 +6,17 @@ String mlocations;
 String mrefs;
 String mContents;
 String mCategory;
+String mtags;
+String mLevels;
 
-public JobModel(String company,String location,String ref,String contents,String category){
+public JobModel(String company,String location,String ref,String contents,String category,String tags,String levels){
     this.mCategory = category;
     this.mCompany =company;
     this.mContents = contents;
     this.mrefs = ref;
     this.mlocations = location;
+    this.mtags = tags;
+    this.mLevels = levels;
     }
 
     public String getmCategory() {
@@ -33,5 +37,13 @@ public JobModel(String company,String location,String ref,String contents,String
 
     public String getMrefs() {
         return mrefs;
+    }
+
+    public String getmLevels() {
+        return mLevels;
+    }
+
+    public String getMtags() {
+        return mtags;
     }
 }

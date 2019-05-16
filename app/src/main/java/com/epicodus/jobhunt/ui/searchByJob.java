@@ -9,9 +9,11 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.epicodus.jobhunt.R;
+import com.epicodus.jobhunt.model.JobModel;
 import com.epicodus.jobhunt.service.MuseService;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -31,7 +33,7 @@ public class searchByJob extends AppCompatActivity implements View.OnClickListen
     @BindView(R.id.editText6)
     EditText mType;
     @BindView(R.id.imageView13) ImageView mSearch;
-
+    public ArrayList<JobModel> mJobsArray = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -81,6 +83,8 @@ public class searchByJob extends AppCompatActivity implements View.OnClickListen
                 try {
                     String jsonData = response.body().string();
                     Log.v(TAG, jsonData);
+
+
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
