@@ -14,4 +14,24 @@ public JobModel(String company,String location,String ref,String contents,String
     this.mrefs = ref;
     this.mlocations = location;
     }
+
+    public String getmCategory() {
+        return mCategory;
+    }
+
+    public String getmContents() {
+        return mContents;
+    }
+
+    public String getmCompany() {
+        return mCompany;
+    }
+
+    public String getMlocations() {
+        return mlocations;
+    }
+
+    public String getMrefs() {
+        return mrefs;
+    }
 }
