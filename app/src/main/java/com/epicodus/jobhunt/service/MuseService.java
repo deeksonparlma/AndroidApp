@@ -2,10 +2,12 @@ package com.epicodus.jobhunt.service;
 
 import com.epicodus.jobhunt.constants.Constants;
 
-import javax.security.auth.callback.Callback;
+import okhttp3.Callback;
 
+import okhttp3.Call;
 import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
+import okhttp3.Request;
 
 public class MuseService {
     public static void findJobs(String jobs, Callback callback){
@@ -15,5 +17,12 @@ public class MuseService {
         HttpUrl.Builder urlBuilder = HttpUrl.parse(Constants.MUSE_BASE_URL).newBuilder();
         urlBuilder.addQueryParameter(Constants.JOBS_QUERY_PARAMETER, jobs);
         String url = urlBuilder.build().toString();
+        //request//
+        Request request = new Request.Builder()
+                .url(url)
+                .header("Authorization", Constants.MUSE_TOKEN)
+                .build();
+        Call call = client.newCall(request);
+        call.enqueue(callback);
     }
 }
