@@ -14,8 +14,8 @@
         android:layout_height="20dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="330dp"
-        android:layout_marginBottom="285dp"
+        android:layout_marginEnd="305dp"
+        android:layout_marginBottom="305dp"
         android:elevation="5dp"
         app:srcCompat="@drawable/phone" />
 
@@ -25,8 +25,8 @@
         android:layout_height="20sp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="333dp"
-        android:layout_marginBottom="390dp"
+        android:layout_marginEnd="304dp"
+        android:layout_marginBottom="398dp"
         android:elevation="5dp"
         app:srcCompat="@drawable/password" />
 
@@ -36,8 +36,8 @@
         android:layout_height="20sp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="331dp"
-        android:layout_marginBottom="340dp"
+        android:layout_marginEnd="304dp"
+        android:layout_marginBottom="350dp"
         android:elevation="5dp"
         app:srcCompat="@drawable/password" />
 
@@ -47,8 +47,8 @@
         android:layout_height="20sp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="336dp"
-        android:layout_marginBottom="445dp"
+        android:layout_marginEnd="303dp"
+        android:layout_marginBottom="451dp"
         android:elevation="5dp"
         app:srcCompat="@drawable/email" />
 
@@ -67,14 +67,14 @@
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="350dp"
+        android:layout_width="300dp"
         android:layout_height="45dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="12dp"
+        android:layout_marginEnd="28dp"
         android:layout_marginBottom="484dp"
         android:width="300dp"
-        android:background="@drawable/edittext"
+        android:background="#8FFF"
         android:ems="10"
         android:hint="User name"
         android:inputType="textPersonName"
@@ -82,14 +82,14 @@
 
     <EditText
         android:id="@+id/editText2"
-        android:layout_width="350dp"
+        android:layout_width="300dp"
         android:layout_height="45dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="379dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="387dp"
         android:width="300dp"
-        android:background="@drawable/edittext"
+        android:background="#8FFF"
         android:ems="10"
         android:hint="password"
         android:inputType="textPassword"
@@ -97,14 +97,14 @@
 
     <EditText
         android:id="@+id/editText3"
-        android:layout_width="350dp"
+        android:layout_width="300dp"
         android:layout_height="45dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="13dp"
-        android:layout_marginBottom="431dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="436dp"
         android:width="300dp"
-        android:background="@drawable/edittext"
+        android:background="#8FFF"
         android:ems="10"
         android:hint="Email"
         android:inputType="textEmailAddress"
@@ -113,14 +113,14 @@
 
     <EditText
         android:id="@+id/editText4"
-        android:layout_width="350dp"
+        android:layout_width="300dp"
         android:layout_height="45dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="13dp"
-        android:layout_marginBottom="330dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="339dp"
         android:width="300dp"
-        android:background="@drawable/edittext"
+        android:background="#8FFF"
         android:ems="10"
         android:hint="Re-enter password"
         android:inputType="textPassword"
@@ -128,14 +128,14 @@
 
     <EditText
         android:id="@+id/editText5"
-        android:layout_width="350dp"
+        android:layout_width="300dp"
         android:layout_height="45dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="273dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="291dp"
         android:width="300dp"
-        android:background="@drawable/edittext"
+        android:background="#8FFF"
         android:ems="10"
         android:hint="Telephone number"
         android:inputType="phone"
@@ -143,12 +143,12 @@
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="155dp"
-        android:layout_marginBottom="200dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="206dp"
         android:background="@drawable/round_button"
         android:text="Sign up" />
 
@@ -158,8 +158,8 @@
         android:layout_height="20sp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="338dp"
-        android:layout_marginBottom="498dp"
+        android:layout_marginEnd="304dp"
+        android:layout_marginBottom="496dp"
         android:elevation="5dp"
         app:srcCompat="@drawable/user" />
 </RelativeLayout>
