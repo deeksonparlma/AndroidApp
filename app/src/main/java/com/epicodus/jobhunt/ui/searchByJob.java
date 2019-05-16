@@ -9,7 +9,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.epicodus.jobhunt.R;
-import com.epicodus.jobhunt.model.JobModel;
 import com.epicodus.jobhunt.service.MuseService;
 
 import java.io.IOException;
@@ -22,6 +21,7 @@ import okhttp3.Callback;
 import okhttp3.Response;
 
 public class searchByJob extends AppCompatActivity implements View.OnClickListener {
+
     public static final String TAG = searchByJob.class.getSimpleName();
     @BindView(R.id.home)
     ImageView mHome;
@@ -33,7 +33,7 @@ public class searchByJob extends AppCompatActivity implements View.OnClickListen
     @BindView(R.id.editText6)
     EditText mType;
     @BindView(R.id.imageView13) ImageView mSearch;
-    public ArrayList<JobModel> mJobsArray = new ArrayList<>();
+    public ArrayList<String> mJobsArray = new ArrayList<String>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -82,7 +82,9 @@ public class searchByJob extends AppCompatActivity implements View.OnClickListen
             public void onResponse(Call call, Response response) throws IOException {
                 try {
                     String jsonData = response.body().string();
+                    mJobsArray.add(jsonData);
                     Log.v(TAG, jsonData);
+
 
 
                 } catch (IOException e) {
