@@ -1,6 +1,9 @@
 package com.epicodus.jobhunt.service;
 
 import com.epicodus.jobhunt.constants.Constants;
+import com.epicodus.jobhunt.model.JobModel;
+
+import java.util.ArrayList;
 
 import okhttp3.Callback;
 
@@ -8,6 +11,7 @@ import okhttp3.Call;
 import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import okhttp3.Response;
 
 public class MuseService {
     public static void findJobs(String jobs, String descending,Callback callback){
@@ -26,4 +30,7 @@ public class MuseService {
         Call call = client.newCall(request);
         call.enqueue(callback);
     }
+public ArrayList<JobModel> processResults(Response response){
+
+}
 }
