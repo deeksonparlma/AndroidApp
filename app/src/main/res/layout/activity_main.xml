@@ -92,5 +92,16 @@
         android:layout_marginBottom="395dp"
         app:srcCompat="@drawable/icon" />
 
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="47dp"
+        android:layout_marginBottom="470dp"
+        android:text="Hunt"
+        android:textFontWeight="200dp"
+        android:textSize="35sp" />
 
 </RelativeLayout>
