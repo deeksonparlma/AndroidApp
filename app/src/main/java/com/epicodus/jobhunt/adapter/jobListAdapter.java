@@ -47,6 +47,7 @@ public class jobListAdapter extends RecyclerView.Adapter<jobListAdapter.JobViewH
     public int getItemCount() {
         return mJobs.size();
     }
+
     public  class JobViewHolder extends RecyclerView.ViewHolder{
        @BindView(R.id.companyLocation) TextView mCompanyLocation;
        @BindView(R.id.companyName) TextView mCompanyName;
