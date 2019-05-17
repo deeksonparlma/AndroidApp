@@ -45,14 +45,54 @@ public ArrayList<JobModel> processResults(Response response){
             for (int i = 0; i < resultsJSON.length(); i++){
                 JSONObject jobJSON = resultsJSON.getJSONObject(i);
                 String contents = jobJSON.getString("contents"); //
-                String tags = jobJSON.getString("tags");
-                String refs = jobJSON.getString("refs"); //
-                String levels = jobJSON.getString("levels");
-                String locations = jobJSON.getString("locations");
-                String categories = jobJSON.getString("categories");
-                String company = jobJSON.getString("company");
+                String tags = "";
+                String company = jobJSON.getJSONObject("company").getString("name");
+                String refs = jobJSON.getJSONObject("refs").getString("landing_page");
+                String levels = "";
+                String categories="";
 
-                JobModel jobsInstance = new JobModel(company,locations,refs,contents,categories,tags,levels);
+                //location//
+                String locationn = "";
+                JSONArray location = jobJSON.getJSONArray("locations");
+                JSONArray cat1 = jobJSON.getJSONArray("categories");
+                JSONArray tag1 = jobJSON.getJSONArray("tags");
+
+
+                for (int a = 0; a < location.length(); a++) {
+
+                    JSONObject l1 = location.getJSONObject(a);
+
+                    String l2 = l1.getString("name");
+                    locationn = l2;
+                }
+
+                //tags//
+
+                for (int b = 0; b < tag1.length(); b++) {
+
+                    JSONObject rf1 = tag1.getJSONObject(b);
+
+                    String rf2 = rf1.getString("name");
+                    tags = rf2;
+                }
+                //categories///
+
+                for (int c = 0; c < cat1.length(); c++) {
+
+                    JSONObject cat2 = cat1.getJSONObject(c);
+
+                    String cat3 = cat2.getString("name");
+                    categories = cat3;
+                }
+
+
+
+
+//                for (int y = 0; y < location2.length(); y++){
+//                    location.add(location.get(y).toString());
+//                }
+
+                JobModel jobsInstance = new JobModel(company,locationn,refs,contents,categories,tags,levels);
                 jobs.add(jobsInstance);
             }
         }

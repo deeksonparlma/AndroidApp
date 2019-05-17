@@ -9,7 +9,7 @@ String mCategory;
 String mtags;
 String mLevels;
 
-public JobModel(String company,String location,String ref,String contents,String category,String tags,String levels){
+public JobModel(String company, String location, String ref, String contents, String category, String tags, String levels){
     this.mCategory = category;
     this.mCompany =company;
     this.mContents = contents;

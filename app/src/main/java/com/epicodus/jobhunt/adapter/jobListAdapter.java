@@ -20,7 +20,7 @@ public class jobListAdapter extends RecyclerView.Adapter<jobListAdapter.JobViewH
 
     private JobViewHolder jobViewHolder;
     private int i;
-    private ArrayList<JobModel> mJobs = new ArrayList<>();
+    private ArrayList<JobModel> mJobs;
     private Context mContext;
 
     public jobListAdapter(Context context, ArrayList<JobModel> jobs) {
@@ -28,7 +28,6 @@ public class jobListAdapter extends RecyclerView.Adapter<jobListAdapter.JobViewH
         mJobs = jobs;
     }
 
-    @NonNull
     @Override
     public jobListAdapter.JobViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.jobs_list, viewGroup, false);
@@ -41,8 +40,6 @@ public class jobListAdapter extends RecyclerView.Adapter<jobListAdapter.JobViewH
     @Override
     public void onBindViewHolder( jobListAdapter.JobViewHolder jobHolder, int i) {
 
-        this.jobViewHolder = jobViewHolder;
-        this.i = i;
         jobHolder.bindJobs(mJobs.get(i));
     }
 
@@ -54,7 +51,7 @@ public class jobListAdapter extends RecyclerView.Adapter<jobListAdapter.JobViewH
        @BindView(R.id.companyLocation) TextView mCompanyLocation;
        @BindView(R.id.companyName) TextView mCompanyName;
        @BindView(R.id.companyLevel) TextView mCompanyLevel;
-        public JobViewHolder(@NonNull View itemView) {
+        public JobViewHolder(View itemView) {
             super(itemView);
 
         }

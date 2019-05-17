@@ -1,14 +1,19 @@
 package com.epicodus.jobhunt.ui;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.epicodus.jobhunt.R;
+import com.epicodus.jobhunt.adapter.jobListAdapter;
+import com.epicodus.jobhunt.model.JobModel;
 import com.epicodus.jobhunt.service.MuseService;
 
 import java.io.IOException;
@@ -32,8 +37,12 @@ public class searchByJob extends AppCompatActivity implements View.OnClickListen
     ImageView mChat;
     @BindView(R.id.editText6)
     EditText mType;
+    @BindView(R.id.recyclerView)
+    RecyclerView mRecyclerView;
     @BindView(R.id.imageView13) ImageView mSearch;
-    public ArrayList<String> mJobsArray = new ArrayList<String>();
+    public ArrayList<JobModel> mJobsArray = new ArrayList<>();
+    private jobListAdapter mAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -80,16 +89,27 @@ public class searchByJob extends AppCompatActivity implements View.OnClickListen
 
             @Override
             public void onResponse(Call call, Response response) throws IOException {
-                try {
-                    String jsonData = response.body().string();
-                    mJobsArray.add(jsonData);
-                    Log.v(TAG, jsonData);
-
-
-
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+                mJobsArray = museService.processResults(response);
+                searchByJob.this.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        mAdapter = new jobListAdapter(getApplicationContext(),mJobsArray);
+                        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(searchByJob.this);
+                        mRecyclerView.setLayoutManager(layoutManager);
+                        mRecyclerView.setHasFixedSize(true);
+                        mRecyclerView.setAdapter(mAdapter);
+                    }
+                });
+//                try {
+//                    String jsonData = response.body().string();
+//                    mJobsArray.add(jsonData);
+//                    Log.v(TAG, jsonData);
+//
+//
+//
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
             }
         });
     }
