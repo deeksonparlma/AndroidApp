@@ -17,7 +17,12 @@
         android:ems="10"
         android:hint="Enter company name"
         android:inputType="textPersonName" />
-
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp">
+    </android.support.v7.widget.RecyclerView>
     <SearchView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
