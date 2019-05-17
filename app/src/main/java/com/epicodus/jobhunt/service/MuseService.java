@@ -92,7 +92,7 @@ public ArrayList<JobModel> processResults(Response response){
 //                    location.add(location.get(y).toString());
 //                }
 
-                JobModel jobsInstance = new JobModel(company,locationn,refs,contents,categories,tags,levels);
+                JobModel jobsInstance = new JobModel(company,locationn,refs,categories,tags,levels);
                 jobs.add(jobsInstance);
             }
         }

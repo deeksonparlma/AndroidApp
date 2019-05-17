@@ -15,10 +15,10 @@ import com.epicodus.jobhunt.model.JobModel;
 import java.util.ArrayList;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class jobListAdapter extends RecyclerView.Adapter<jobListAdapter.JobViewHolder> {
 
-    private JobViewHolder jobViewHolder;
     private int i;
     private ArrayList<JobModel> mJobs;
     private Context mContext;
@@ -50,15 +50,17 @@ public class jobListAdapter extends RecyclerView.Adapter<jobListAdapter.JobViewH
     public  class JobViewHolder extends RecyclerView.ViewHolder{
        @BindView(R.id.companyLocation) TextView mCompanyLocation;
        @BindView(R.id.companyName) TextView mCompanyName;
-       @BindView(R.id.companyLevel) TextView mCompanyLevel;
+       @BindView(R.id.companyWebsite) TextView mCompanyWebsite;
         public JobViewHolder(View itemView) {
             super(itemView);
+            ButterKnife.bind(this, itemView);
+            mContext = itemView.getContext();
 
         }
         public void bindJobs(JobModel jobs) {
-            mCompanyName.setText(jobs.getmCompany());
-            mCompanyLocation.setText(jobs.getMlocations());
-            mCompanyLevel.setText(jobs.getmLevels());
+            mCompanyName.setText(" Company:"+" "+jobs.getmCompany());
+            mCompanyLocation.setText(" location :"+" "+jobs.getMlocations());
+            mCompanyWebsite.setText(" Category:"+" "+jobs.getmCategory());
         }
     }
 }
