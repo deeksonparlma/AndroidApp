@@ -31,14 +31,10 @@ public class searchByJob extends AppCompatActivity implements View.OnClickListen
     @BindView(R.id.home)
     ImageView mHome;
     @BindView(R.id.editText9) EditText mDesc;
-    @BindView(R.id.jobs)
-    ImageView mJobs;
-    @BindView(R.id.chat)
-    ImageView mChat;
-    @BindView(R.id.editText6)
-    EditText mType;
-    @BindView(R.id.recyclerView)
-    RecyclerView mRecyclerView;
+    @BindView(R.id.jobs) ImageView mJobs;
+    @BindView(R.id.chat) ImageView mChat;
+    @BindView(R.id.editText6) EditText mType;
+    @BindView(R.id.recyclerView) RecyclerView mRecyclerView;
     @BindView(R.id.imageView13) ImageView mSearch;
     public ArrayList<JobModel> mJobsArray = new ArrayList<>();
     private jobListAdapter mAdapter;

@@ -3,6 +3,7 @@ package com.epicodus.jobhunt.ui;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -15,6 +16,7 @@ public class searchByCompany extends AppCompatActivity implements View.OnClickLi
 @BindView(R.id.home) ImageView mHome;
 @BindView(R.id.jobs) ImageView mJobs;
 @BindView(R.id.chat) ImageView mChat;
+@BindView(R.id.recyclerView2) RecyclerView mRecyclerView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
