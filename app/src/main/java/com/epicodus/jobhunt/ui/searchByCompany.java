@@ -8,15 +8,23 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.epicodus.jobhunt.R;
+import com.epicodus.jobhunt.adapter.companyListAdapter;
+import com.epicodus.jobhunt.model.CompanyModel;
+
+import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class searchByCompany extends AppCompatActivity implements View.OnClickListener {
+    public static final String TAG = searchByJob.class.getSimpleName();
 @BindView(R.id.home) ImageView mHome;
 @BindView(R.id.jobs) ImageView mJobs;
 @BindView(R.id.chat) ImageView mChat;
 @BindView(R.id.recyclerView2) RecyclerView mRecyclerView;
+    public ArrayList<CompanyModel> mJobsArray = new ArrayList<>();
+    private companyListAdapter mAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
