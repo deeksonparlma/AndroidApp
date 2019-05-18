@@ -33,6 +33,9 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
             else if( mPassword.getText().toString().trim().isEmpty()){
                 mPassword.setError("invalid password");
             }
+            else if( mPassword.getText().toString().length() < 8){
+                mPassword.setError("password's less than 8 characters");
+            }
 
             else{
                 Intent intent = new  Intent(this,jobSearch.class);
