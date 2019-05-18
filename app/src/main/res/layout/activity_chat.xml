@@ -19,8 +19,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="278dp"
-        android:layout_marginBottom="554dp"
+        android:layout_marginEnd="294dp"
+        android:layout_marginBottom="520dp"
         android:src="@drawable/jobs" />
 
     <android.support.design.widget.BottomNavigationView
@@ -63,8 +63,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="128dp"
-        android:layout_marginBottom="587dp"
+        android:layout_marginEnd="135dp"
+        android:layout_marginBottom="544dp"
         android:text="Job Hunt customer Care" />
 
     <TextView
@@ -73,10 +73,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="219dp"
-        android:layout_marginBottom="570dp"
-        android:textColor="@color/colorAccent"
-        android:text="Online" />
+        android:layout_marginEnd="232dp"
+        android:layout_marginBottom="524dp"
+        android:text="Online"
+        android:textColor="@color/colorAccent" />
 
     <EditText
         android:id="@+id/editText7"

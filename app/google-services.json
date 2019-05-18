@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "723916647745",
+    "firebase_url": "https://jobhunt-dab9f.firebaseio.com",
+    "project_id": "jobhunt-dab9f",
+    "storage_bucket": "jobhunt-dab9f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:723916647745:android:e72d698211e2b43f",
+        "android_client_info": {
+          "package_name": "com.epicodus.jobhunt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "723916647745-str7vh83fo89tb96m6302jfo0gurf8g0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.epicodus.jobhunt",
+            "certificate_hash": "3ae28e4a372174833dcb464d0bb47a1188ad07c1"
+          }
+        },
+        {
+          "client_id": "723916647745-omgjp89u8uhb9gims1q17f4ond8cnpu7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJZ79XG70Geo6QWEjTD6aRWEOQJxR_77A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "723916647745-omgjp89u8uhb9gims1q17f4ond8cnpu7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

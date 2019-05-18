@@ -12,8 +12,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="92dp"
-        android:layout_marginBottom="622dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="601dp"
         android:elevation="3dp"
         android:text="All Job vacancies globally"
         android:textFontWeight="20dp"
@@ -28,7 +28,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="0dp"
         android:layout_marginLeft="0dp"
-        android:layout_marginTop="53dp"
+        android:layout_marginTop="63dp"
         android:columnWidth="200sp"
         android:gravity="left"
         android:numColumns="2"
@@ -83,6 +83,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="search"
+        android:visibility="gone"
         />
 
     <!--<ListView-->

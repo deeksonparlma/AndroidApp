@@ -13,16 +13,16 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="103dp"
-        android:layout_marginBottom="603dp"
+        android:layout_marginBottom="576dp"
         android:ems="10"
         android:hint="Enter company name"
         android:inputType="textPersonName" />
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp">
-    </android.support.v7.widget.RecyclerView>
+        android:layout_marginTop="100dp"></android.support.v7.widget.RecyclerView>
     <EditText
         android:id="@+id/editText9"
         android:layout_width="wrap_content"
@@ -36,14 +36,15 @@
         android:inputType="textPersonName"
         android:visibility="invisible"
         android:text="true"/>
+
     <ImageView
         android:id="@+id/imageView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="64dp"
-        android:layout_marginBottom="605dp"
+        android:layout_marginEnd="66dp"
+        android:layout_marginBottom="581dp"
         app:srcCompat="@drawable/search" />
     <android.support.design.widget.BottomNavigationView
         android:layout_width="match_parent"
