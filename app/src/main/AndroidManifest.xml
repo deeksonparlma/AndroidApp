@@ -8,16 +8,15 @@
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="false"
         android:icon="@drawable/icon"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:hardwareAccelerated="false"
-        android:largeHeap="true"
-        >
-
-        <activity android:name=".ui.chatActivity"></activity>
+        android:theme="@style/AppTheme">
+        <activity android:name=".ui.Login"></activity>
+        <activity android:name=".ui.chatActivity" />
         <activity android:name=".ui.displayAllJobs" />
         <activity android:name=".ui.searchByJob" />
         <activity android:name=".ui.searchByCompany" />
@@ -39,7 +38,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.MainActivity"
+        <activity
+            android:name=".ui.MainActivity"
             android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
