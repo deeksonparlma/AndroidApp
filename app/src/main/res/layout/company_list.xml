@@ -21,7 +21,7 @@
         android:padding="10dp">
 
         <TextView
-            android:id="@+id/companyName"
+            android:id="@+id/companyNamee"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Company Name"
@@ -30,13 +30,13 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/companyLocation"
+            android:id="@+id/companyLocationn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/companyName"
+            android:layout_below="@+id/companyWebsitee"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
-            android:text="location"
+            android:text="vacancies still available"
             android:textStyle="italic" />
 
         <RelativeLayout
@@ -44,7 +44,7 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/companyWebsite"
+                android:id="@+id/companyWebsitee"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="website"

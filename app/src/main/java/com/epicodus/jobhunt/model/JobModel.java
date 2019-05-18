@@ -9,6 +9,7 @@ String mCategory;
 String mtags;
 String mLevels;
 
+
 public JobModel(String company, String location, String ref,  String category, String tags, String levels){
     this.mCategory = category;
     this.mCompany =company;
@@ -16,6 +17,7 @@ public JobModel(String company, String location, String ref,  String category, S
     this.mlocations = location;
     this.mtags = tags;
     this.mLevels = levels;
+
     }
 
     public String getmCategory() {

@@ -3,26 +3,36 @@ package com.epicodus.jobhunt.ui;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.epicodus.jobhunt.R;
 import com.epicodus.jobhunt.adapter.companyListAdapter;
 import com.epicodus.jobhunt.model.CompanyModel;
+import com.epicodus.jobhunt.service.MuseService;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.Response;
 
 public class searchByCompany extends AppCompatActivity implements View.OnClickListener {
     public static final String TAG = searchByJob.class.getSimpleName();
 @BindView(R.id.home) ImageView mHome;
 @BindView(R.id.jobs) ImageView mJobs;
 @BindView(R.id.chat) ImageView mChat;
+@BindView(R.id.editText6) EditText mType;
+@BindView(R.id.editText9) EditText mDesc;
+@BindView(R.id.imageView13) ImageView mSearch;
 @BindView(R.id.recyclerView2) RecyclerView mRecyclerView;
-    public ArrayList<CompanyModel> mJobsArray = new ArrayList<>();
+    public ArrayList<CompanyModel> mCompanyArray = new ArrayList<>();
     private companyListAdapter mAdapter;
 
     @Override
@@ -33,6 +43,7 @@ public class searchByCompany extends AppCompatActivity implements View.OnClickLi
         mHome.setOnClickListener(this);
         mJobs.setOnClickListener(this);
         mChat.setOnClickListener(this);
+        mSearch.setOnClickListener(this);
     }
 
     @Override
@@ -52,6 +63,47 @@ public class searchByCompany extends AppCompatActivity implements View.OnClickLi
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
             startActivityForResult(intent, 0);
         }
+        else if(v == mSearch){
+            String company = mType.getText().toString();
+            String descending = mDesc.getText().toString();
+            getCompany(company,descending);
+            mType.setText("");
+        }
+    }
+    private void getCompany(String company,String descending){
+        final MuseService museService = new MuseService();
+        museService.findCompanies(company, descending, new Callback() {
+
+            @Override
+            public void onFailure(Call call, IOException e) {
+                e.printStackTrace();
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                mCompanyArray = museService.companies(response);
+                searchByCompany.this.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        mAdapter = new companyListAdapter(getApplicationContext(),mCompanyArray);
+                        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(searchByCompany.this);
+                        mRecyclerView.setLayoutManager(layoutManager);
+                        mRecyclerView.setHasFixedSize(true);
+                        mRecyclerView.setAdapter(mAdapter);
+                    }
+                });
+//                try {
+//                    String jsonData = response.body().string();
+//                    mJobsArray.add(jsonData);
+//                    Log.v(TAG, jsonData);
+//
+//
+//
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+            }
+        });
     }
 }
 

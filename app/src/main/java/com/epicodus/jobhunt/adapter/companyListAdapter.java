@@ -19,6 +19,12 @@ import butterknife.ButterKnife;
 public class companyListAdapter extends RecyclerView.Adapter<companyListAdapter.CompanyViewHolder> {
     private ArrayList<CompanyModel> mCompany;
     private Context mContext;
+
+    public companyListAdapter(Context applicationContext, ArrayList<CompanyModel> mCompanyArray) {
+        mContext = applicationContext;
+        mCompany = mCompanyArray;
+    }
+
     @Override
     public companyListAdapter.CompanyViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.company_list, viewGroup, false);
@@ -38,10 +44,9 @@ public class companyListAdapter extends RecyclerView.Adapter<companyListAdapter.
     }
 
     public class CompanyViewHolder extends RecyclerView.ViewHolder {
-        @BindView(R.id.companyLocation)
-        TextView mCompanyLocation;
-        @BindView(R.id.companyName) TextView mCompanyName;
-        @BindView(R.id.companyWebsite) TextView mCompanyWebsite;
+//        @BindView(R.id.companyLocationn) TextView mCompanyLocation;
+        @BindView(R.id.companyNamee) TextView mCompanyName;
+        @BindView(R.id.companyWebsitee) TextView mCompanyWebsite;
 
         public CompanyViewHolder(View view) {
             super(view);
@@ -50,9 +55,9 @@ public class companyListAdapter extends RecyclerView.Adapter<companyListAdapter.
 
         }
         public void bindCompanies(CompanyModel company){
-            mCompanyName.setText(" Company:"+" "+company.getmCompany());
-            mCompanyLocation.setText(" location :"+" "+company.getmDatePosted());
-            mCompanyWebsite.setText(" Category:"+" "+company.getmDatePosted());
+            mCompanyName.setText(" Company:"+" "+company.getmName());
+//            mCompanyLocation.setText(" location(s) :"+" "+company.getmLocation());
+            mCompanyWebsite.setText(" published on:"+" "+company.getmPublicationDate());
         }
     }
 }

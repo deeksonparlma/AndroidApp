@@ -2,42 +2,59 @@ package com.epicodus.jobhunt.model;
 
 public class CompanyModel {
     private  String mDescription;
-    private String mIndustry;
-    private String mCompany;
-    private String mDatePosted;
-    private String mSize;
+    private  String mLocation;
+    private  String mIndustry;
+    private String mTags;
+    private  String mName;
+    private String mPublicationDate;
+    private  String mTwitter;
+    private String mcompanySize;
     private String mRefs;
-
-    public CompanyModel(String description,String industry,String company,String vDate,String size,String Refs){
-        mCompany = company;
-        mDatePosted =vDate;
-        mDescription = description;
-        mIndustry = industry;
-        mRefs = Refs;
-        mSize = size;
+    public CompanyModel( String description, String location,String industry,String tags,String name,String pDate,String twitter,String cSize,String refs){
+        mDescription =description;
+        mLocation = location;
+        mIndustry =industry;
+        mTags = tags;
+        mName = name;
+        mPublicationDate =pDate;
+        mTwitter = twitter;
+        mcompanySize = cSize;
+        mRefs =refs;
     }
 
-    public String getmCompany() {
-        return mCompany;
+    public String getmName() {
+        return mName;
     }
 
-    public String getmDatePosted() {
-        return mDatePosted;
-    }
-
-    public String getmDescription() {
-        return mDescription;
-    }
-
-    public String getmIndustry() {
-        return mIndustry;
+    public String getmTwitter() {
+        return mTwitter;
     }
 
     public String getmRefs() {
         return mRefs;
     }
 
-    public String getmSize() {
-        return mSize;
+    public String getmIndustry() {
+        return mIndustry;
+    }
+
+    public String getmDescription() {
+        return mDescription;
+    }
+
+    public String getMcompanySize() {
+        return mcompanySize;
+    }
+
+    public String getmLocation() {
+        return mLocation;
+    }
+
+    public String getmPublicationDate() {
+        return mPublicationDate;
+    }
+
+    public String getmTags() {
+        return mTags;
     }
 }
