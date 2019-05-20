@@ -15,28 +15,38 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.Login"
-            android:launchMode="singleTop"></activity>
-        <activity android:name=".ui.chatActivity"
-            android:launchMode="singleTop"/>
-        <activity android:name=".ui.displayAllJobs"
-            android:launchMode="singleTop"/>
-        <activity android:name=".ui.searchByJob"
-            android:launchMode="singleTop"/>
-        <activity android:name=".ui.searchByCompany"
-            android:launchMode="singleTop"/>
-        <activity android:name=".ui.jobSearch"
-            android:launchMode="singleTop"/>
+        <activity android:name=".companyDetailActivity"></activity>
+        <activity
+            android:name=".ui.Login"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ui.chatActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ui.displayAllJobs"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ui.searchByJob"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ui.searchByCompany"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ui.jobSearch"
+            android:launchMode="singleTop" />
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-6291199528234939~3659960798" />
 
-        <activity android:name=".ui.HomeActivity"
-            android:launchMode="singleTop"/>
-        <activity android:name=".ui.signUp"
-            android:launchMode="singleTop"/>
-        <activity android:name=".ui.splashScreen"
+        <activity
+            android:name=".ui.HomeActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ui.signUp"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ui.splashScreen"
             android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

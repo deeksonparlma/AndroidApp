@@ -1,5 +1,8 @@
 package com.epicodus.jobhunt.model;
 
+import org.parceler.Parcel;
+
+@Parcel
 public class CompanyModel {
     private  String mDescription;
     private  String mLocation;
@@ -10,7 +13,11 @@ public class CompanyModel {
     private  String mTwitter;
     private String mcompanySize;
     private String mRefs;
-    public CompanyModel( String description, String location,String industry,String tags,String name,String pDate,String twitter,String cSize,String refs){
+
+    public CompanyModel() {
+    }
+
+    public CompanyModel(String description, String location, String industry, String tags, String name, String pDate, String twitter, String cSize, String refs){
         mDescription =description;
         mLocation = location;
         mIndustry =industry;

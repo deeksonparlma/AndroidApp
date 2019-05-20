@@ -1,6 +1,7 @@
 package com.epicodus.jobhunt.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -9,7 +10,10 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.epicodus.jobhunt.R;
+import com.epicodus.jobhunt.companyDetailActivity;
 import com.epicodus.jobhunt.model.CompanyModel;
+
+import org.parceler.Parcels;
 
 import java.util.ArrayList;
 
@@ -43,7 +47,7 @@ public class companyListAdapter extends RecyclerView.Adapter<companyListAdapter.
        return mCompany.size();
     }
 
-    public class CompanyViewHolder extends RecyclerView.ViewHolder {
+    public class CompanyViewHolder extends RecyclerView.ViewHolder implements  View.OnClickListener {
 //        @BindView(R.id.companyLocationn) TextView mCompanyLocation;
         @BindView(R.id.companyNamee) TextView mCompanyName;
         @BindView(R.id.companyWebsitee) TextView mCompanyWebsite;
@@ -52,12 +56,22 @@ public class companyListAdapter extends RecyclerView.Adapter<companyListAdapter.
             super(view);
             ButterKnife.bind(this,view);
             mContext =view.getContext();
+            itemView.setOnClickListener(this);
 
         }
         public void bindCompanies(CompanyModel company){
             mCompanyName.setText(" Company:"+" "+company.getmName());
 //            mCompanyLocation.setText(" location(s) :"+" "+company.getmLocation());
             mCompanyWebsite.setText(" published on:"+" "+company.getmPublicationDate());
+        }
+
+        @Override
+        public void onClick(View v) {
+            int itemPosition = getLayoutPosition();
+            Intent intent = new Intent(mContext, companyDetailActivity.class);
+            intent.putExtra("position", itemPosition);
+            intent.putExtra("company", Parcels.wrap(mCompany));
+            mContext.startActivity(intent);
         }
     }
 }
