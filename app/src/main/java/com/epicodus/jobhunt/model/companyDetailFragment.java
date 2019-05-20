@@ -19,9 +19,13 @@ import butterknife.ButterKnife;
 
 public class companyDetailFragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
-    @BindView(R.id.ts)
-    TextView mName;
-    private static final String ARG_PARAM2 = "param2";
+    @BindView(R.id.ts) TextView mName;
+    @BindView(R.id.website) TextView web;
+    @BindView(R.id.textView12) TextView location;
+    @BindView(R.id.description) TextView description;
+    @BindView(R.id.publicationDate) TextView published;
+    @BindView(R.id.twitter) TextView twitter;
+    @BindView(R.id.tags) TextView tags;
     private CompanyModel company;
 
     public companyDetailFragment() {
@@ -46,6 +50,13 @@ public class companyDetailFragment extends Fragment {
         View view =  inflater.inflate(R.layout.fragment_company_detail, container, false);
         ButterKnife.bind(this,view);
         mName.setText(company.getmName());
+        web.setText("website : "+company.getmRefs());
+        location.setText(company.getmLocation());
+        description.setText(company.getmDescription());
+        published.setText("published on"+" "+company.getmPublicationDate());
+        twitter.setText("twitter handle :@"+company.getmTwitter());
+        tags.setText(company.getmTags());
+
         return  view;
 
     }

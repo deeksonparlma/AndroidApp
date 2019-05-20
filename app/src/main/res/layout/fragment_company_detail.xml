@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".model.companyDetailFragment">
+    tools:context=".model.companyDetailFragment"
+    android:background="#ADD3EC">
 
     <!-- TODO: Update blank fragment layout -->
     <android.support.v4.view.ViewPager
@@ -18,10 +20,110 @@
             android:paddingTop="4dp"
             android:paddingBottom="4dp" />
     </android.support.v4.view.ViewPager>
-<TextView
-    android:id="@+id/ts"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="80dp"
-    android:layout_marginLeft="50dp"/>
+
+    <TextView
+        android:id="@+id/ts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="142dp"
+        android:elevation="20dp"
+        android:text="Company name" />
+
+    <LinearLayout
+        android:layout_width="420dp"
+        android:layout_height="200dp"
+        android:background="@drawable/signup">
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="132dp"
+        android:layout_marginBottom="535dp"
+        android:elevation="20dp"
+        android:text="Location" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="301dp"
+        android:layout_marginBottom="521dp"
+        android:elevation="20dp"
+        android:src="@drawable/icon" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="450dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="154dp"
+        android:text="description of the company"
+        android:layout_marginStart="9dp"/>
+
+    <TextView
+        android:id="@+id/website"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="260dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="252dp"
+        android:text="Website" />
+
+    <TextView
+        android:id="@+id/publicationDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="260dp"
+        android:layout_marginEnd="142dp"
+        android:layout_marginBottom="336dp"
+        android:layout_marginStart="9dp"
+        android:text="publication Date" />
+
+    <TextView
+        android:id="@+id/twitter"
+        android:layout_width="450dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="9dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="260dp"
+        android:layout_marginEnd="177dp"
+        android:layout_marginBottom="302dp"
+        android:text="twitter" />
+
+    <TextView
+        android:id="@+id/tags"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="260dp"
+        android:layout_marginEnd="314dp"
+        android:layout_marginBottom="257dp"
+        android:text="tags" />
 </RelativeLayout>
