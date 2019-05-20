@@ -7,6 +7,7 @@
     tools:context=".ui.HomeActivity"
     android:animateLayoutChanges="true"
     android:background="@drawable/signup"
+
     >
 
     <TextView
