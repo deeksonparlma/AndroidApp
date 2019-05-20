@@ -9,16 +9,26 @@
 
     <EditText
         android:id="@+id/editText6"
-        android:layout_width="wrap_content"
+        android:layout_width="90dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="96dp"
-        android:layout_marginBottom="587dp"
-        android:ems="10"
-        android:hint="no. of pages to display"
-        android:inputType="textPersonName" />
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="244dp"
+        android:layout_marginBottom="597dp"
+        android:background="#fff"
+        android:elevation="50dp"
 
+        android:ems="10"
+        android:hint="page No."
+        android:inputType="number" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/job">
+
+    </LinearLayout>
 
 
     <android.support.design.widget.BottomNavigationView
@@ -37,6 +47,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
             />
+
 
         <ImageView
             android:id="@+id/jobs"
@@ -64,8 +75,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="68dp"
-        android:layout_marginBottom="600dp"
+        android:layout_marginEnd="217dp"
+        android:layout_marginBottom="598dp"
+        android:background="#fff"
+        android:elevation="50dp"
         app:srcCompat="@drawable/search" />
 
     <EditText
@@ -87,7 +100,7 @@
     android:id="@+id/recyclerView"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginTop="60dp">
+    android:layout_marginTop="100dp">
 </android.support.v7.widget.RecyclerView>
 
 </RelativeLayout>

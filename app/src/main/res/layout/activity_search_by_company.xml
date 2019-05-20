@@ -6,17 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".ui.searchByCompany">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/job">
+
+    </LinearLayout>
+
     <EditText
         android:id="@+id/editText6"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="103dp"
-        android:layout_marginBottom="576dp"
+        android:layout_marginEnd="239dp"
+        android:layout_marginBottom="592dp"
+        android:background="#fff"
         android:ems="10"
-        android:hint="Enter company name"
-        android:inputType="textPersonName" />
+        android:hint="page No."
+        android:inputType="number"
+        android:maxLength="2" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView2"
@@ -43,8 +52,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="66dp"
-        android:layout_marginBottom="581dp"
+        android:layout_marginEnd="217dp"
+        android:layout_marginBottom="593dp"
+        android:background="#fff"
+        android:elevation="50dp"
         app:srcCompat="@drawable/search" />
     <android.support.design.widget.BottomNavigationView
         android:layout_width="match_parent"

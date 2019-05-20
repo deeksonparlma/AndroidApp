@@ -51,10 +51,10 @@ public class companyDetailFragment extends Fragment {
         ButterKnife.bind(this,view);
         mName.setText(company.getmName());
         web.setText("website : "+company.getmRefs());
-        location.setText(company.getmLocation());
+        location.setText("Location (s) :"+" "+company.getmLocation());
         description.setText(company.getmDescription());
         published.setText("published on"+" "+company.getmPublicationDate());
-        twitter.setText("twitter handle :@"+company.getmTwitter());
+        twitter.setText("twitter :@"+company.getmTwitter());
         tags.setText(company.getmTags());
 
         return  view;

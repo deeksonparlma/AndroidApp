@@ -23,15 +23,18 @@
 
     <TextView
         android:id="@+id/ts"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginStart="100dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginLeft="50dp"
-        android:layout_marginTop="39dp"
-        android:layout_marginEnd="142dp"
+        android:layout_marginTop="83dp"
+        android:layout_marginEnd="70dp"
         android:elevation="20dp"
-        android:text="Company name" />
+        android:text="Company name"
+        android:textFontWeight="4dp"
+        android:textSize="25sp" />
 
     <LinearLayout
         android:layout_width="420dp"
@@ -43,12 +46,13 @@
 
     <TextView
         android:id="@+id/textView12"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="132dp"
-        android:layout_marginBottom="535dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="117dp"
         android:elevation="20dp"
         android:text="Location" />
 
@@ -58,23 +62,33 @@
         android:layout_height="70dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="301dp"
-        android:layout_marginBottom="521dp"
+        android:layout_marginEnd="276dp"
+        android:layout_marginBottom="512dp"
         android:elevation="20dp"
         android:src="@drawable/icon" />
 
     <TextView
         android:id="@+id/description"
-        android:layout_width="450dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="220dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="154dp"
-        android:text="description of the company"
-        android:layout_marginStart="9dp"/>
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginEnd="0dp"
+        android:text="description of the company" />
+
+    <TextView
+        android:id="@+id/cc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="225dp"
+        android:layout_marginEnd="0dp"
+        android:text="Description"
+        android:textFontWeight="200dp"
+        android:textSize="20dp" />
 
     <TextView
         android:id="@+id/website"
@@ -86,7 +100,7 @@
         android:layout_marginLeft="50dp"
         android:layout_marginTop="260dp"
         android:layout_marginEnd="0dp"
-        android:layout_marginBottom="252dp"
+        android:layout_marginBottom="230dp"
         android:text="Website" />
 
     <TextView
@@ -95,11 +109,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginStart="9dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="260dp"
         android:layout_marginEnd="142dp"
-        android:layout_marginBottom="336dp"
-        android:layout_marginStart="9dp"
+        android:layout_marginBottom="289dp"
         android:text="publication Date" />
 
     <TextView
@@ -111,8 +125,8 @@
         android:layout_marginStart="9dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="260dp"
-        android:layout_marginEnd="177dp"
-        android:layout_marginBottom="302dp"
+        android:layout_marginEnd="179dp"
+        android:layout_marginBottom="258dp"
         android:text="twitter" />
 
     <TextView
@@ -123,7 +137,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="260dp"
-        android:layout_marginEnd="314dp"
-        android:layout_marginBottom="257dp"
+        android:layout_marginEnd="367dp"
+        android:layout_marginBottom="182dp"
         android:text="tags" />
 </RelativeLayout>
