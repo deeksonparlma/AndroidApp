@@ -55,51 +55,38 @@ public class signUp extends AppCompatActivity implements View.OnClickListener{
         final String confirmPass =mConfirmPassword.getText().toString();
         final String phone =mTelephone.getText().toString();
 
-        if(v == mSignUp){
+        if(v == mSignUp) {
             if (username.isEmpty()) {
                 mUsername.setError("invalid Username");
-            }
-            else if(!(Patterns.EMAIL_ADDRESS.matcher(Email).matches())){
+            } else if (!(Patterns.EMAIL_ADDRESS.matcher(Email).matches())) {
                 mEmail.setError("invalid email");
-            }
-            else if(mPassword.getText().toString().length() < 8){
+            } else if (mPassword.getText().toString().length() < 8) {
                 mPassword.setError("password is less than 8 characters");
-            }
-            else if(!(confirmPass.matches(password))){
+            } else if (!(confirmPass.matches(password))) {
                 mConfirmPassword.setError("password mismatch");
-            }
-            else if(phone.length() != 10) {
+            } else if (phone.length() != 10) {
                 mTelephone.setError("invalid number");
-            }
-//            else {
-//                String usernamee = mUsername.getText().toString();
-//                Toast.makeText(signUp.this, "Sign up successful", Toast.LENGTH_LONG).show();
-//                Intent intent = new Intent(signUp.this, HomeActivity.class);
-//                intent.putExtra("username", usernamee);
-//                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-//                startActivityForResult(intent, 0);
-//                finish();
-//            }
-            mAuth.createUserWithEmailAndPassword(Email, password)
-                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                        @Override
-                        public void onComplete(@NonNull Task<AuthResult> task) {
-                            if (task.isSuccessful()) {
-                                String usernamee = mUsername.getText().toString();
-                                Toast.makeText(signUp.this, "Sign up successful", Toast.LENGTH_LONG).show();
-                                Intent intent = new Intent(signUp.this, HomeActivity.class);
-                                intent.putExtra("username", usernamee);
-                                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                                startActivityForResult(intent, 0);
-                                finish();
-                            } else {
-                                Toast.makeText(signUp.this, Objects.requireNonNull(task.getException()).getMessage(),
-                                        Toast.LENGTH_SHORT).show();
+            } else if (!username.isEmpty() && Patterns.EMAIL_ADDRESS.matcher(Email).matches() && mPassword.getText().toString().length() >= 8 && confirmPass.matches(password) && phone.length() == 10) {
+                mAuth.createUserWithEmailAndPassword(Email, password)
+                        .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if (task.isSuccessful()) {
+                                    String usernamee = mUsername.getText().toString();
+                                    Toast.makeText(signUp.this, "Sign up successful", Toast.LENGTH_LONG).show();
+                                    Intent intent = new Intent(signUp.this, HomeActivity.class);
+                                    intent.putExtra("username", usernamee);
+                                    intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                                    startActivityForResult(intent, 0);
+                                    finish();
+                                } else {
+                                    Toast.makeText(signUp.this, Objects.requireNonNull(task.getException()).getMessage(),
+                                            Toast.LENGTH_SHORT).show();
+                                }
                             }
-                        }
-                    });
+                        });
+            }
         }
-
         //code//
 
     }

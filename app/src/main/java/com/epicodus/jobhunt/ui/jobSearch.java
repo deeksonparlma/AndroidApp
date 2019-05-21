@@ -51,7 +51,7 @@ public class jobSearch extends AppCompatActivity implements View.OnClickListener
     //logout from firebase//
     private void logout() {
         FirebaseAuth.getInstance().signOut();
-        Intent intent = new Intent(jobSearch.this, Login.class);
+        Intent intent = new Intent(jobSearch.this, MainActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
         finish();

@@ -139,7 +139,8 @@
         android:ems="10"
         android:hint="Telephone number"
         android:inputType="phone"
-        android:paddingStart="30dp" />
+        android:paddingStart="30dp"
+        android:maxLength="10"/>
 
     <Button
         android:id="@+id/button3"
