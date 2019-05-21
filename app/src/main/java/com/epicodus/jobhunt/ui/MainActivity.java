@@ -36,13 +36,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent intent = new Intent(MainActivity.this, signUp.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
             startActivityForResult(intent, 0);
-            finish();
         }
         else if(v == mloginButton){
             Intent intent = new Intent(MainActivity.this,Login.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
             startActivityForResult(intent, 0);
-            finish();
         }
         else if(v == mInstagram){
             Intent webIntent = new Intent(Intent.ACTION_VIEW,
