@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.Login">
+    tools:context=".ui.Login"
+    android:background="@drawable/signup">
 
     <EditText
         android:id="@+id/editText10"
@@ -18,6 +19,7 @@
         android:hint="username"
         android:inputType="textPersonName"
         tools:layout_editor_absoluteX="111dp"
+        android:textColorHint="#ffff"
         tools:layout_editor_absoluteY="110dp" />
 
     <EditText
@@ -31,6 +33,7 @@
         android:ems="10"
         android:hint="password"
         android:inputType="textPassword"
+        android:textColorHint="#ffff"
         tools:layout_editor_absoluteX="111dp"
         tools:layout_editor_absoluteY="181dp" />
 
@@ -45,4 +48,16 @@
         android:text="Log in"
         android:textAllCaps="false"
         />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="175dp"
+        android:layout_marginBottom="559dp"
+        android:text="LOGIN"
+        android:textColor="#fff"
+        android:textSize="20dp" />
 </RelativeLayout>
