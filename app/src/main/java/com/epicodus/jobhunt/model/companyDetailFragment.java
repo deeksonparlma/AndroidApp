@@ -1,6 +1,7 @@
 package com.epicodus.jobhunt.model;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -17,7 +18,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
-public class companyDetailFragment extends Fragment {
+public class companyDetailFragment extends Fragment implements View.OnClickListener {
     private static final String ARG_PARAM1 = "param1";
     @BindView(R.id.ts) TextView mName;
     @BindView(R.id.website) TextView web;
@@ -26,6 +27,7 @@ public class companyDetailFragment extends Fragment {
     @BindView(R.id.publicationDate) TextView published;
     @BindView(R.id.twitter) TextView twitter;
     @BindView(R.id.tags) TextView tags;
+    @BindView(R.id.website) TextView website;
     private CompanyModel company;
 
     public companyDetailFragment() {
@@ -59,6 +61,15 @@ public class companyDetailFragment extends Fragment {
 
         return  view;
 
+    }
+
+    @Override
+    public void onClick(View v) {
+        if(v == website){
+            Intent webIntent = new Intent(Intent.ACTION_VIEW,
+                    Uri.parse(company.getmRefs()));
+            startActivity(webIntent);
+    }
     }
 
 //    // TODO: Rename method, update argument and hook method into UI event

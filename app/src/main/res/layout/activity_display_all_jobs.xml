@@ -15,7 +15,7 @@
         android:layout_marginEnd="64dp"
         android:layout_marginBottom="601dp"
         android:elevation="3dp"
-        android:text="All Job vacancies globally"
+        android:text="Here are you're saved Jobs"
         android:textFontWeight="20dp"
         android:textSize="25sp" />
 
