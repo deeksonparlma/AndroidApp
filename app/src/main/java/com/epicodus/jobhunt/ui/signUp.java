@@ -55,6 +55,7 @@ public class signUp extends AppCompatActivity implements View.OnClickListener{
                 intent.putExtra("username", username);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivityForResult(intent, 0);
+                finish();
             }
         }
     }

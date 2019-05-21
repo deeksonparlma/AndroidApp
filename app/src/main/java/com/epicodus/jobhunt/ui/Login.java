@@ -41,6 +41,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
                 Intent intent = new  Intent(this,jobSearch.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivityForResult(intent, 0);
+                finish();
             }
         }
     }
