@@ -9,9 +9,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.epicodus.jobhunt.R;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -31,7 +33,9 @@ public class jobSearch extends AppCompatActivity implements View.OnClickListener
         mJobName.setOnClickListener(this);
         mJobs.setOnClickListener(this);
         mChat.setOnClickListener(this);
+
     }
+
     //menu inflation//
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -56,6 +60,7 @@ public class jobSearch extends AppCompatActivity implements View.OnClickListener
         startActivity(intent);
         finish();
     }
+
 
     //
     @Override

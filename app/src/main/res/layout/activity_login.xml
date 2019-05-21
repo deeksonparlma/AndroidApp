@@ -10,49 +10,50 @@
     <EditText
         android:id="@+id/editText10"
         android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:paddingStart="10dp"
+        android:layout_height="60dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="50dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginBottom="461dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="366dp"
+        android:background="@layout/round_edittext"
         android:ems="10"
-        android:hint="you@gmail.com"
+        android:hint="email"
         android:inputType="textEmailAddress"
-        tools:layout_editor_absoluteX="111dp"
+        android:paddingStart="45dp"
         android:textColorHint="#ffff"
-        tools:layout_editor_absoluteY="110dp"
-        />
+        tools:layout_editor_absoluteX="111dp"
+        tools:layout_editor_absoluteY="110dp" />
 
     <EditText
         android:id="@+id/editText11"
         android:layout_width="350dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="50dp"
-        android:layout_marginStart="50dp"
-        android:paddingStart="10dp"
-        android:layout_marginBottom="405dp"
-        android:ems="10"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="262dp"
+        android:background="@layout/round_edittext"
         android:hint="password"
         android:inputType="textPassword"
+        android:paddingStart="45dp"
         android:textColorHint="#ffff"
         tools:layout_editor_absoluteX="111dp"
         tools:layout_editor_absoluteY="181dp" />
 
     <Button
         android:id="@+id/btn"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="151dp"
-        android:layout_marginBottom="334dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginEnd="49dp"
+        android:layout_marginBottom="175dp"
+        android:background="#BEEEB6"
         android:text="Log in"
-        android:textAllCaps="false"
-        />
+        android:textAllCaps="false" />
 
     <TextView
         android:id="@+id/textView13"
@@ -60,11 +61,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="175dp"
-        android:layout_marginBottom="559dp"
+        android:layout_marginEnd="153dp"
+        android:layout_marginBottom="523dp"
         android:text="LOGIN"
         android:textColor="#fff"
-        android:textSize="20dp" />
+        android:textSize="30dp" />
 <LinearLayout
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"></LinearLayout>
@@ -77,13 +78,13 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="50dp"
         android:layout_marginEnd="47dp"
-        android:layout_marginBottom="504dp"
+        android:layout_marginBottom="442dp"
         android:background="#FC5C77"
-        android:paddingStart="50dp"
-        android:paddingTop="15dp"
         android:fadingEdge="horizontal"
         android:fadingEdgeLength="5dp"
-        android:text="Incorrect email or incorrect_password" />
+        android:paddingStart="50dp"
+        android:paddingTop="15dp"
+        android:text="Incorrect email or password" />
 
     <ImageView
         android:id="@+id/imageView15"
@@ -91,8 +92,28 @@
         android:layout_height="30dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="265dp"
-        android:layout_marginBottom="515dp"
+        android:layout_marginEnd="270dp"
+        android:layout_marginBottom="453dp"
         app:srcCompat="@drawable/error" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="294dp"
+        android:layout_marginBottom="388dp"
+        app:srcCompat="@drawable/user" />
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="289dp"
+        android:layout_marginBottom="279dp"
+        app:srcCompat="@drawable/password" />
 
 </RelativeLayout>
