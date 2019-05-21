@@ -1,5 +1,6 @@
 package com.epicodus.jobhunt.ui;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -32,6 +33,7 @@ public class signUp extends AppCompatActivity implements View.OnClickListener{
 @BindView(R.id.editText4) EditText mConfirmPassword;
 @BindView(R.id.editText5) EditText mTelephone;
     private FirebaseAuth mAuth;
+    private ProgressDialog mAuthProgressDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +41,15 @@ public class signUp extends AppCompatActivity implements View.OnClickListener{
         ButterKnife.bind(this);
         mSignUp.setOnClickListener(this);
         mAuth = FirebaseAuth.getInstance();
+        createAuthProgressDialog();
+    }
+
+    //progress bar//
+    private void createAuthProgressDialog() {
+        mAuthProgressDialog = new ProgressDialog(this);
+        mAuthProgressDialog.setTitle("Loading...");
+        mAuthProgressDialog.setMessage("Authenticating with Firebase...");
+        mAuthProgressDialog.setCancelable(false);
     }
 //    @Override
 //    public void onStart() {
@@ -67,12 +78,14 @@ public class signUp extends AppCompatActivity implements View.OnClickListener{
             } else if (phone.length() != 10) {
                 mTelephone.setError("invalid number");
             } else if (!username.isEmpty() && Patterns.EMAIL_ADDRESS.matcher(Email).matches() && mPassword.getText().toString().length() >= 8 && confirmPass.matches(password) && phone.length() == 10) {
+                mAuthProgressDialog.show();
                 mAuth.createUserWithEmailAndPassword(Email, password)
                         .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
                                     String usernamee = mUsername.getText().toString();
+                                    mAuthProgressDialog.dismiss();
                                     Toast.makeText(signUp.this, "Sign up successful", Toast.LENGTH_LONG).show();
                                     Intent intent = new Intent(signUp.this, HomeActivity.class);
                                     intent.putExtra("username", usernamee);
@@ -80,6 +93,7 @@ public class signUp extends AppCompatActivity implements View.OnClickListener{
                                     startActivityForResult(intent, 0);
                                     finish();
                                 } else {
+                                    mAuthProgressDialog.dismiss();
                                     Toast.makeText(signUp.this, Objects.requireNonNull(task.getException()).getMessage(),
                                             Toast.LENGTH_SHORT).show();
                                 }
