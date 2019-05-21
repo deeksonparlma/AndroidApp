@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.epicodus.jobhunt.R;
@@ -24,6 +26,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
 @BindView(R.id.editText10) EditText mEmail;
 @BindView(R.id.editText11) EditText mPassword;
 @BindView(R.id.btn) Button mLogin;
+@BindView(R.id.textView14) TextView mError;
+@BindView(R.id.imageView15) ImageView mHazard;
     private ProgressDialog mAuthProgressDialog;
     private FirebaseAuth mAuth;
     @Override
@@ -31,6 +35,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
+        mError.setVisibility(View.INVISIBLE);
+        mHazard.setVisibility(View.INVISIBLE);
         mLogin.setOnClickListener(this);
         mAuth = FirebaseAuth.getInstance();
         createAuthProgressDialog();
@@ -78,6 +84,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
                                      finish();
                                 } else {
                                     mAuthProgressDialog.dismiss();
+                                    mError.setVisibility(View.VISIBLE);
+                                    mHazard.setVisibility(View.VISIBLE);
                                     Toast.makeText(Login.this, "Login failed.",
                                             Toast.LENGTH_SHORT).show();
                                 }

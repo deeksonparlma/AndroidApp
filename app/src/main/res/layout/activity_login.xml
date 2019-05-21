@@ -65,4 +65,34 @@
         android:text="LOGIN"
         android:textColor="#fff"
         android:textSize="20dp" />
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"></LinearLayout>
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginBottom="504dp"
+        android:background="#FC5C77"
+        android:paddingStart="50dp"
+        android:paddingTop="15dp"
+        android:fadingEdge="horizontal"
+        android:fadingEdgeLength="5dp"
+        android:text="Incorrect email or incorrect_password" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="265dp"
+        android:layout_marginBottom="515dp"
+        app:srcCompat="@drawable/error" />
+
 </RelativeLayout>
