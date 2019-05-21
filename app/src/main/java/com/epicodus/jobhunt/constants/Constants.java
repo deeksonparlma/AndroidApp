@@ -8,6 +8,7 @@ public class Constants {
     public static final String MUSE_COMPANIES_URL = "https://www.themuse.com/api/public/companies";
     public static final String JOBS_QUERY_PARAMETER = "page";
     public static final String PAGE_QUERY_PARAMETER = "descending";
+//    public static final String PREFERENCES_PAGE_KEY = "page ";
 
     //chat//
 //    public static final String ACABOT_TOKEN = BuildConfig.MUSE_TOKEN;
