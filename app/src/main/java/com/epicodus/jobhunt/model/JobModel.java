@@ -4,7 +4,6 @@ public class JobModel {
 String mCompany;
 String mlocations;
 String mrefs;
-String mContents;
 String mCategory;
 String mtags;
 String mLevels;

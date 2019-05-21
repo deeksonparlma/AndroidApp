@@ -27,7 +27,6 @@ public class companyDetailFragment extends Fragment implements View.OnClickListe
     @BindView(R.id.publicationDate) TextView published;
     @BindView(R.id.twitter) TextView twitter;
     @BindView(R.id.tags) TextView tags;
-    @BindView(R.id.website) TextView website;
     private CompanyModel company;
 
     public companyDetailFragment() {
@@ -58,14 +57,14 @@ public class companyDetailFragment extends Fragment implements View.OnClickListe
         published.setText("published on"+" "+company.getmPublicationDate());
         twitter.setText("twitter :@"+company.getmTwitter());
         tags.setText(company.getmTags());
-
+        web.setOnClickListener(this);
         return  view;
 
     }
 
     @Override
     public void onClick(View v) {
-        if(v == website){
+        if(v == web){
             Intent webIntent = new Intent(Intent.ACTION_VIEW,
                     Uri.parse(company.getmRefs()));
             startActivity(webIntent);

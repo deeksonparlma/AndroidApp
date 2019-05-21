@@ -1,5 +1,6 @@
 package com.epicodus.jobhunt;
 
+import android.support.v4.view.PagerTabStrip;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -25,7 +26,6 @@ public class companyDetailActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         mCompany = Parcels.unwrap(getIntent().getParcelableExtra("company"));
         int startingPosition = getIntent().getIntExtra("position", 0);
-
         adapterViewPager = new pageAdapter(getSupportFragmentManager(), mCompany);
         mViewPager.setAdapter(adapterViewPager);
         mViewPager.setCurrentItem(startingPosition);
