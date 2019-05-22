@@ -9,6 +9,8 @@ public class Constants {
     public static final String JOBS_QUERY_PARAMETER = "page";
     public static final String PAGE_QUERY_PARAMETER = "descending";
 //    public static final String PREFERENCES_PAGE_KEY = "page ";
+public static final String FIREBASE_JOB_SEARCHED = "jobsearch";
+}
 
     //chat//
 //    public static final String ACABOT_TOKEN = BuildConfig.MUSE_TOKEN;
@@ -18,4 +20,4 @@ public class Constants {
 //    public static final String UI_ID = "uid";
 
 
-}
+

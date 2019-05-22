@@ -42,6 +42,7 @@
         android:background="@drawable/signup">
 
 
+
     </LinearLayout>
 
     <TextView
@@ -140,4 +141,16 @@
         android:layout_marginEnd="367dp"
         android:layout_marginBottom="182dp"
         android:text="tags" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="32dp"
+        android:layout_weight="1"
+        android:text="Save"
+        />
 </RelativeLayout>

@@ -8,9 +8,17 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.epicodus.jobhunt.R;
+import com.epicodus.jobhunt.constants.Constants;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 
 import org.parceler.Parcels;
 
@@ -27,6 +35,7 @@ public class companyDetailFragment extends Fragment implements View.OnClickListe
     @BindView(R.id.publicationDate) TextView published;
     @BindView(R.id.twitter) TextView twitter;
     @BindView(R.id.tags) TextView tags;
+    @BindView(R.id.save) Button mSave;
     private CompanyModel company;
 
     public companyDetailFragment() {
@@ -58,6 +67,7 @@ public class companyDetailFragment extends Fragment implements View.OnClickListe
         twitter.setText("twitter :@"+company.getmTwitter());
         tags.setText(company.getmTags());
         web.setOnClickListener(this);
+        mSave.setOnClickListener(this);
         return  view;
 
     }
@@ -69,6 +79,20 @@ public class companyDetailFragment extends Fragment implements View.OnClickListe
                     Uri.parse(company.getmRefs()));
             startActivity(webIntent);
     }
+        if (v == mSave) {
+            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+            String uid = user.getUid();
+            DatabaseReference jobRef = FirebaseDatabase
+                    .getInstance()
+                    .getReference(Constants.FIREBASE_JOB_SEARCHED)
+                    .child(uid);
+            DatabaseReference pushRef = jobRef.push();
+            String pushId = pushRef.getKey();
+            company.setPushId(pushId);
+            pushRef.setValue(company);
+
+            Toast.makeText(getContext(), "Saved", Toast.LENGTH_SHORT).show();
+        }
     }
 
 //    // TODO: Rename method, update argument and hook method into UI event

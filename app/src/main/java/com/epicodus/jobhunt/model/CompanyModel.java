@@ -13,6 +13,7 @@ public class CompanyModel {
     private  String mTwitter;
     private String mcompanySize;
     private String mRefs;
+    private String pushId;
 
     public CompanyModel() {
     }
@@ -63,5 +64,12 @@ public class CompanyModel {
 
     public String getmTags() {
         return mTags;
+    }
+    public String getPushId() {
+        return pushId;
+    }
+
+    public void setPushId(String pushId) {
+        this.pushId = pushId;
     }
 }
