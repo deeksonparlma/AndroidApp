@@ -92,6 +92,7 @@ public class companyDetailFragment extends Fragment implements View.OnClickListe
             pushRef.setValue(company);
 
             Toast.makeText(getContext(), "Saved", Toast.LENGTH_SHORT).show();
+            mSave.setVisibility(View.INVISIBLE);
         }
     }
 

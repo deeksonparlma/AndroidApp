@@ -27,6 +27,8 @@ public class pageAdapter extends FragmentPagerAdapter {
     }
     @Override
     public CharSequence getPageTitle(int position) {
-        return mCompany.get(position).getmPublicationDate();
+        return mCompany.get(position).getmName();
     }
+
+
 }

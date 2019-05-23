@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
     android:layout_width="480dp"
-    android:layout_height="140dp"
+    android:layout_height="90dp"
     android:paddingStart="20dp"
     android:background="#EFFBFF">
 
@@ -29,7 +29,6 @@
             android:textColor="@color/colorPrimary"
             android:textSize="17sp"
             android:textStyle="bold" />
-
         <TextView
             android:id="@+id/companyLocationn"
             android:layout_width="wrap_content"
@@ -49,9 +48,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="website"
+                android:textSize="8dp"
                 android:textColor="@color/colorAccent"
                 />
-
         </RelativeLayout>
     </LinearLayout>
 </LinearLayout>

@@ -50,7 +50,8 @@ public class companyListAdapter extends RecyclerView.Adapter<companyListAdapter.
     public class CompanyViewHolder extends RecyclerView.ViewHolder implements  View.OnClickListener {
 //        @BindView(R.id.companyLocationn) TextView mCompanyLocation;
         @BindView(R.id.companyNamee) TextView mCompanyName;
-        @BindView(R.id.companyWebsitee) TextView mCompanyWebsite;
+        @BindView(R.id.companyWebsitee) TextView mmCompany;
+
 
         public CompanyViewHolder(View view) {
             super(view);
@@ -62,7 +63,7 @@ public class companyListAdapter extends RecyclerView.Adapter<companyListAdapter.
         public void bindCompanies(CompanyModel company){
             mCompanyName.setText(" Company:"+" "+company.getmName());
 //            mCompanyLocation.setText(" location(s) :"+" "+company.getmLocation());
-            mCompanyWebsite.setText(" published on:"+" "+company.getmPublicationDate());
+            mmCompany.setText("published :"+" "+company.getmPublicationDate());
         }
 
         @Override

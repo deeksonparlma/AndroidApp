@@ -19,22 +19,22 @@
         android:textFontWeight="20dp"
         android:textSize="25sp" />
 
-    <GridView
-        android:id="@+id/textView10"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="63dp"
-        android:columnWidth="200sp"
-        android:gravity="left"
-        android:numColumns="2"
-        android:padding="9dp"
-        android:scrollingCache="false"
-        android:stretchMode="spacingWidthUniform" />
+    <!--<GridView-->
+        <!--android:id="@+id/textView10"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_marginStart="0dp"-->
+        <!--android:layout_marginLeft="0dp"-->
+        <!--android:layout_marginTop="63dp"-->
+        <!--android:columnWidth="200sp"-->
+        <!--android:gravity="left"-->
+        <!--android:numColumns="2"-->
+        <!--android:padding="9dp"-->
+        <!--android:scrollingCache="false"-->
+        <!--android:stretchMode="spacingWidthUniform" />-->
 
     <android.support.design.widget.BottomNavigationView
         android:layout_width="match_parent"
@@ -85,6 +85,11 @@
         android:text="search"
         android:visibility="gone"
         />
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerView"
+        android:layout_marginTop="100dp"/>
 
     <!--<ListView-->
         <!--android:layout_width="350dp"-->
