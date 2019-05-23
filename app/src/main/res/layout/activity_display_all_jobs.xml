@@ -5,6 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.displayAllJobs">
+<LinearLayout
+    android:layout_width="450dp"
+    android:layout_height="90dp"
+    android:background="#D2ECF8">
+
+</LinearLayout>
 
     <TextView
         android:id="@+id/textView3"
@@ -12,10 +18,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="64dp"
-        android:layout_marginBottom="601dp"
+        android:layout_marginEnd="178dp"
+        android:layout_marginBottom="595dp"
         android:elevation="3dp"
-        android:text="Here are you're saved Jobs"
+        android:text="saved Jobs"
+        android:textColor="#000"
         android:textFontWeight="20dp"
         android:textSize="25sp" />
 
@@ -89,7 +96,17 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/recyclerView"
-        android:layout_marginTop="100dp"/>
+        android:layout_marginTop="90dp"/>
+
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="305dp"
+        android:layout_marginBottom="584dp"
+        app:srcCompat="@drawable/save" />
 
     <!--<ListView-->
         <!--android:layout_width="350dp"-->
