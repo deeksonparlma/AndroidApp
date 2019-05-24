@@ -54,7 +54,7 @@
             android:layout_width="100dp"
             android:layout_height="20dp"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="150dp"
+            android:layout_marginLeft="250dp"
             android:src="@drawable/jobs"
             />
 
@@ -65,6 +65,7 @@
             android:src="@drawable/chat"
             android:layout_marginLeft="260dp"
             android:layout_marginTop="10dp"
+            android:visibility="gone"
             />
 
     </android.support.design.widget.BottomNavigationView>

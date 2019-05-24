@@ -10,53 +10,52 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:background="@drawable/job">
-
+        <EditText
+            android:id="@+id/editText6"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="30dp"
+            android:paddingStart="4dp"
+            android:ems="10"
+            android:hint="page No."
+            android:inputType="number"
+            android:maxLength="2"
+            android:elevation="20dp"/>
+        <ImageView
+            android:id="@+id/imageView13"
+            android:layout_width="wrap_content"
+            android:layout_height="21 dp"
+            android:layout_marginTop="40dp"
+            android:background="#fff"
+            android:elevation="50dp"
+            app:srcCompat="@drawable/search" />
     </LinearLayout>
 
-    <EditText
-        android:id="@+id/editText6"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="239dp"
-        android:layout_marginBottom="592dp"
-        android:background="#fff"
-        android:ems="10"
-        android:hint="page No."
-        android:inputType="number"
-        android:maxLength="2" />
+
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"></android.support.v7.widget.RecyclerView>
+
     <EditText
         android:id="@+id/editText9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="94dp"
-        android:layout_marginBottom="535dp"
+        android:layout_marginEnd="189dp"
+        android:layout_marginBottom="586dp"
         android:ems="10"
         android:hint="true/false"
         android:inputType="textPersonName"
-        android:visibility="invisible"
-        android:text="true"/>
+        android:text="true"
+        android:visibility="invisible" />
 
-    <ImageView
-        android:id="@+id/imageView13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="217dp"
-        android:layout_marginBottom="593dp"
-        android:background="#fff"
-        android:elevation="50dp"
-        app:srcCompat="@drawable/search" />
+
     <android.support.design.widget.BottomNavigationView
         android:layout_width="match_parent"
         android:layout_height="40dp"
@@ -79,7 +78,7 @@
             android:layout_width="100dp"
             android:layout_height="20dp"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="150dp"
+            android:layout_marginLeft="260dp"
             android:src="@drawable/jobs"
             />
 
@@ -90,6 +89,7 @@
             android:src="@drawable/chat"
             android:layout_marginLeft="260dp"
             android:layout_marginTop="10dp"
+            android:visibility="gone"
             />
 
     </android.support.design.widget.BottomNavigationView>

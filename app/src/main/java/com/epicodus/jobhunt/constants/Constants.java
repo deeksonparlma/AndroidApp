@@ -10,14 +10,15 @@ public class Constants {
     public static final String PAGE_QUERY_PARAMETER = "descending";
 //    public static final String PREFERENCES_PAGE_KEY = "page ";
 public static final String FIREBASE_JOB_SEARCHED = "jobsearch";
+ //chat//
+    public static final String ACABOT_TOKEN = BuildConfig.MUSE_TOKEN;
+    public static final String ACABOT_BASE_URL = "https://acobot-brainshop-ai-v1.p.rapidapi.com/get";
+    public static final String CHAT_QUERY_PARAMETER = "msg";
+    public static final String BID_QUERY_PARAMETER = "bid";
+    public static final String UI_ID = "uid";
 }
 
-    //chat//
-//    public static final String ACABOT_TOKEN = BuildConfig.MUSE_TOKEN;
-//    public static final String ACABOT_BASE_URL = "https://acobot-brainshop-ai-v1.p.rapidapi.com/get";
-//    public static final String CHAT_QUERY_PARAMETER = "msg";
-//    public static final String BID_QUERY_PARAMETER = "bid";
-//    public static final String UI_ID = "uid";
+
 
 
 
