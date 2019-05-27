@@ -40,7 +40,7 @@ public void bindCompanies(CompanyModel company){
 
 }    @Override
     public void onClick(View v) {
-        final ArrayList<CompanyModel> restaurants = new ArrayList<>();
+        final ArrayList<CompanyModel> companies = new ArrayList<>();
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         String uid = user.getUid();
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference(Constants.FIREBASE_JOB_SEARCHED).child(uid);
@@ -48,13 +48,13 @@ public void bindCompanies(CompanyModel company){
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for(DataSnapshot snapshot: dataSnapshot.getChildren()){
-                    restaurants.add(snapshot.getValue(CompanyModel.class));
+                    companies.add(snapshot.getValue(CompanyModel.class));
                 }
 
                 int itemPosition = getLayoutPosition();
                 Intent intent = new Intent(mContext, companyDetailActivity.class);
                 intent.putExtra("position", itemPosition + "");
-                intent.putExtra("company", Parcels.wrap(restaurants));
+                intent.putExtra("company", Parcels.wrap(companies));
 
                 mContext.startActivity(intent);
             }
