@@ -13,8 +13,8 @@
         <EditText
             android:id="@+id/editText6"
             android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:background="#fff"
+            android:layout_height="30dp"
+            android:background="@layout/round_edittext"
             android:layout_marginTop="40dp"
             android:layout_marginLeft="30dp"
             android:paddingStart="4dp"
@@ -26,9 +26,9 @@
         <ImageView
             android:id="@+id/imageView13"
             android:layout_width="wrap_content"
-            android:layout_height="21 dp"
+            android:layout_height="21dp"
             android:layout_marginTop="40dp"
-            android:background="#fff"
+            android:background="@layout/round_edittext"
             android:elevation="50dp"
             app:srcCompat="@drawable/search" />
     </LinearLayout>
