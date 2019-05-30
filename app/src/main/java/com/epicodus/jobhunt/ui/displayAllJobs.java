@@ -37,14 +37,14 @@ import okhttp3.Response;
 
 public class displayAllJobs extends AppCompatActivity implements View.OnClickListener{
 //    public static final String TAG = displayAllJobs.class.getSimpleName();
-    GridView gridView;
-
-    String[] companies = new String[]{
-            "Safaricom ltd" , "Moringa School","Google"
-    };
-    String[] vacancies = new String[]{
-      "Software Developer" , "Technical Mentor","Data Scientist"
-    };
+//    GridView gridView;
+//
+//    String[] companies = new String[]{
+//            "Safaricom ltd" , "Moringa School","Google"
+//    };
+//    String[] vacancies = new String[]{
+//      "Software Developer" , "Technical Mentor","Data Scientist"
+//    };
 //    @BindView(R.id.textView10) GridView mjobsInCompanies;
     @BindView(R.id.home) ImageView mHome;
     @BindView(R.id.jobs) ImageView mJobs;

@@ -1,16 +1,25 @@
 package com.epicodus.jobhunt.ui;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
+import android.text.InputType;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.epicodus.jobhunt.R;
 import com.epicodus.jobhunt.adapter.companyListAdapter;
+import com.epicodus.jobhunt.constants.Constants;
 import com.epicodus.jobhunt.model.CompanyModel;
 import com.epicodus.jobhunt.service.MuseService;
 
@@ -24,6 +33,7 @@ import okhttp3.Callback;
 import okhttp3.Response;
 
 public class searchByCompany extends AppCompatActivity implements View.OnClickListener {
+
     public static final String TAG = searchByJob.class.getSimpleName();
 @BindView(R.id.home) ImageView mHome;
 @BindView(R.id.jobs) ImageView mJobs;
@@ -44,6 +54,31 @@ public class searchByCompany extends AppCompatActivity implements View.OnClickLi
         mJobs.setOnClickListener(this);
         mChat.setOnClickListener(this);
         mSearch.setOnClickListener(this);
+
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.search, menu);
+        ButterKnife.bind(this);
+        MenuItem menuItem = menu.findItem(R.id.action_search);
+        SearchView searchView = (SearchView) MenuItemCompat.getActionView(menuItem);
+        searchView.setInputType(InputType.TYPE_CLASS_NUMBER);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                String descending = mDesc.getText().toString();
+                getCompany(query,descending);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return false;
+            }
+        });
+        return true;
     }
 
     @Override

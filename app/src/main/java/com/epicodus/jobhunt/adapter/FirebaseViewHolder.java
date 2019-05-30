@@ -4,13 +4,17 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.epicodus.jobhunt.R;
 import com.epicodus.jobhunt.companyDetailActivity;
 import com.epicodus.jobhunt.constants.Constants;
 import com.epicodus.jobhunt.model.CompanyModel;
+import com.epicodus.jobhunt.util.ItemTouchHelperAdapter;
+import com.epicodus.jobhunt.util.ItemTouchHelperViewHolder;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -23,7 +27,7 @@ import org.parceler.Parcels;
 
 import java.util.ArrayList;
 
-public class FirebaseViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+public class FirebaseViewHolder extends RecyclerView.ViewHolder implements  ItemTouchHelperViewHolder,View.OnClickListener , ItemTouchHelperAdapter {
     View mView;
     Context mContext;
     public FirebaseViewHolder(View itemView) {
@@ -39,7 +43,7 @@ public void bindCompanies(CompanyModel company){
     publication.setText("published :"+" "+company.getmPublicationDate());
 
 }    @Override
-    public void onClick(View v) {
+    public void onClick(final View v) {
         final ArrayList<CompanyModel> companies = new ArrayList<>();
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         String uid = user.getUid();
@@ -50,12 +54,10 @@ public void bindCompanies(CompanyModel company){
                 for(DataSnapshot snapshot: dataSnapshot.getChildren()){
                     companies.add(snapshot.getValue(CompanyModel.class));
                 }
-
                 int itemPosition = getLayoutPosition();
                 Intent intent = new Intent(mContext, companyDetailActivity.class);
                 intent.putExtra("position", itemPosition + "");
                 intent.putExtra("company", Parcels.wrap(companies));
-
                 mContext.startActivity(intent);
             }
 
@@ -64,5 +66,25 @@ public void bindCompanies(CompanyModel company){
 
             }
         });
+    }
+
+    @Override
+    public void onItemSelected() {
+        Log.d("Animation", "onItemSelected");
+    }
+
+    @Override
+    public void onItemClear() {
+        Log.d("Animation", "onItemClear");
+    }
+
+    @Override
+    public boolean onItemMove(int fromPosition, int toPosition) {
+        return false;
+    }
+
+    @Override
+    public void onItemDismiss(int position) {
+
     }
 }

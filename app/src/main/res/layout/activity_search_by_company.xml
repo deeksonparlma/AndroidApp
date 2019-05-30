@@ -22,7 +22,8 @@
             android:hint="page No."
             android:inputType="number"
             android:maxLength="2"
-            android:elevation="20dp"/>
+            android:elevation="20dp"
+            android:visibility="invisible" />
         <ImageView
             android:id="@+id/imageView13"
             android:layout_width="wrap_content"
@@ -30,7 +31,8 @@
             android:layout_marginTop="40dp"
             android:background="@layout/round_edittext"
             android:elevation="50dp"
-            app:srcCompat="@drawable/search" />
+            app:srcCompat="@drawable/search"
+            android:visibility="invisible" />
     </LinearLayout>
 
 

@@ -4,6 +4,7 @@ import org.parceler.Parcel;
 
 @Parcel
 public class CompanyModel {
+    String index;
     private  String mDescription;
     private  String mLocation;
     private  String mIndustry;
@@ -28,6 +29,7 @@ public class CompanyModel {
         mTwitter = twitter;
         mcompanySize = cSize;
         mRefs =refs;
+        this.index = "not_specified";
     }
 
     public String getmName() {
@@ -71,5 +73,12 @@ public class CompanyModel {
 
     public void setPushId(String pushId) {
         this.pushId = pushId;
+    }
+    public String getIndex() {
+        return index;
+    }
+
+    public void setIndex(String index) {
+        this.index = index;
     }
 }
