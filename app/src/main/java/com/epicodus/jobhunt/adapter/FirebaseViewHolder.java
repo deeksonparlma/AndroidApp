@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.epicodus.jobhunt.R;
@@ -30,6 +31,7 @@ import org.parceler.Parcels;
 import java.util.ArrayList;
 
 public class FirebaseViewHolder extends RecyclerView.ViewHolder implements  ItemTouchHelperViewHolder,View.OnClickListener , ItemTouchHelperAdapter {
+    public ImageView mCompanyImage;
     View mView;
     Context mContext;
     public FirebaseViewHolder(View itemView) {
@@ -39,6 +41,7 @@ public class FirebaseViewHolder extends RecyclerView.ViewHolder implements  Item
         itemView.setOnClickListener(this);
     }
 public void bindCompanies(CompanyModel company){
+        mCompanyImage =mView.findViewById(R.id.dragMe);
     TextView nameTextView = mView.findViewById(R.id.companyNamee);
     nameTextView.setText(company.getmName());
     TextView publication = mView.findViewById(R.id.companyWebsitee);

@@ -1,8 +1,6 @@
 package com.epicodus.jobhunt.ui;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -19,7 +17,6 @@ import android.widget.ImageView;
 
 import com.epicodus.jobhunt.R;
 import com.epicodus.jobhunt.adapter.companyListAdapter;
-import com.epicodus.jobhunt.constants.Constants;
 import com.epicodus.jobhunt.model.CompanyModel;
 import com.epicodus.jobhunt.service.MuseService;
 
@@ -89,7 +86,7 @@ public class searchByCompany extends AppCompatActivity implements View.OnClickLi
             startActivityForResult(intent, 0);
         }
         else if(v == mJobs){
-            Intent intent = new Intent(searchByCompany.this,displayAllJobs.class);
+            Intent intent = new Intent(searchByCompany.this, displaySavedJobs.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
             startActivityForResult(intent, 0);
         }

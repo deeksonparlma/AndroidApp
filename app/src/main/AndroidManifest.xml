@@ -23,7 +23,7 @@
             android:name=".ui.chatActivity"
             android:launchMode="singleTop" />
         <activity
-            android:name=".ui.displayAllJobs"
+            android:name=".ui.displaySavedJobs"
             android:launchMode="singleTop" />
         <activity
             android:name=".ui.searchByJob"

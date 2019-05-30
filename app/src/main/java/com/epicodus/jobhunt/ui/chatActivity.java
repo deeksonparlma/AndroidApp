@@ -40,7 +40,7 @@ public class chatActivity extends AppCompatActivity implements View.OnClickListe
             mTyping.setText("");
         }
         else if (v == mJobs){
-            Intent intent = new Intent(chatActivity.this,displayAllJobs.class);
+            Intent intent = new Intent(chatActivity.this, displaySavedJobs.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
             startActivityForResult(intent, 0);
         }

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="480dp"
+    android:layout_height="90dp"
+    android:paddingStart="20dp"
+    android:background="#EFFBFF">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/dragMe"
+            android:layout_width="20dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:elevation="200dp"
+            android:src="@drawable/drag" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/companyImage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/icon" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EFFBFF"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/companyNamee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Company Name"
+            android:textColor="@color/colorPrimary"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/companyLocationn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/companyWebsitee"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:text="vacancies still available"
+            android:textStyle="italic" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/companyWebsitee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="website"
+                android:textSize="8dp"
+                android:textColor="@color/colorAccent"
+                />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

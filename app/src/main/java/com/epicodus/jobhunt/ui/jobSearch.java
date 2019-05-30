@@ -9,11 +9,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.epicodus.jobhunt.R;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -76,7 +74,7 @@ public class jobSearch extends AppCompatActivity implements View.OnClickListener
             startActivityForResult(intent, 0);
         }
         else if (v == mJobs){
-            Intent intent = new Intent(jobSearch.this,displayAllJobs.class);
+            Intent intent = new Intent(jobSearch.this, displaySavedJobs.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
             startActivityForResult(intent, 0);
         }

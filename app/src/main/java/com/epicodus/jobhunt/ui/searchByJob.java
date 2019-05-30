@@ -1,12 +1,10 @@
 package com.epicodus.jobhunt.ui;
 
-import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -58,7 +56,7 @@ public class searchByJob extends AppCompatActivity implements View.OnClickListen
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
             startActivityForResult(intent, 0);
         } else if (v == mJobs) {
-            Intent intent = new Intent(searchByJob.this, displayAllJobs.class);
+            Intent intent = new Intent(searchByJob.this, displaySavedJobs.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
             startActivityForResult(intent, 0);
         } else if (v == mChat) {
