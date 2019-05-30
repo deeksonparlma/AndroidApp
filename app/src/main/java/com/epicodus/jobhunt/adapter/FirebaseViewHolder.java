@@ -1,5 +1,7 @@
 package com.epicodus.jobhunt.adapter;
 
+import android.animation.AnimatorInflater;
+import android.animation.AnimatorSet;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -70,12 +72,16 @@ public void bindCompanies(CompanyModel company){
 
     @Override
     public void onItemSelected() {
-        Log.d("Animation", "onItemSelected");
+        AnimatorSet set = (AnimatorSet) AnimatorInflater.loadAnimator(mContext, R.animator.drag_scale_on);
+        set.setTarget(itemView);
+        set.start();
     }
 
     @Override
     public void onItemClear() {
-        Log.d("Animation", "onItemClear");
+        AnimatorSet set = (AnimatorSet) AnimatorInflater.loadAnimator(mContext, R.animator.drag_scale_off);
+        set.setTarget(itemView);
+        set.start();
     }
 
     @Override
