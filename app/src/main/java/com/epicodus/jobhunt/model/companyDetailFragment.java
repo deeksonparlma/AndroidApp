@@ -2,10 +2,12 @@ package com.epicodus.jobhunt.model;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
+import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -13,6 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,6 +28,8 @@ import com.google.firebase.database.FirebaseDatabase;
 
 
 import org.parceler.Parcels;
+
+import java.io.ByteArrayOutputStream;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -41,6 +46,7 @@ public class companyDetailFragment extends Fragment implements View.OnClickListe
     @BindView(R.id.twitter) TextView twitter;
     @BindView(R.id.tags) TextView tags;
     @BindView(R.id.save) Button mSave;
+    @BindView(R.id.imageView14) ImageView mImageLabel;
     private CompanyModel company;
     private String mSource;
 
@@ -82,7 +88,27 @@ public class companyDetailFragment extends Fragment implements View.OnClickListe
             startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
         }
     }
-
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == getActivity().RESULT_OK) {
+            Bundle extras = data.getExtras();
+            Bitmap imageBitmap = (Bitmap) extras.get("data");
+            mImageLabel.setImageBitmap(imageBitmap);
+            encodeBitmapAndSaveToFirebase(imageBitmap);
+        }
+    }
+    //saving image to database//
+    public void encodeBitmapAndSaveToFirebase(Bitmap bitmap) {
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos);
+        String imageEncoded = Base64.encodeToString(baos.toByteArray(), Base64.DEFAULT);
+        DatabaseReference ref = FirebaseDatabase.getInstance()
+                .getReference(Constants.FIREBASE_JOB_SEARCHED)
+                .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                .child(company.getPushId())
+                .child("imageUrl");
+        ref.setValue(imageEncoded);
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
