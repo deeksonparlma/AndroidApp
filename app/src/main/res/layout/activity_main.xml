@@ -41,7 +41,7 @@
         app:srcCompat="@drawable/linkedin" />
 
     <ImageView
-        android:id="@+id/imageView7"
+            android:id="@+id/imageView7"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_alignParentEnd="true"

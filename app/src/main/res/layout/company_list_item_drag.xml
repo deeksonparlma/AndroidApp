@@ -17,7 +17,8 @@
             android:layout_height="50dp"
             android:layout_marginTop="20dp"
             android:elevation="200dp"
-            android:src="@drawable/drag" />
+            android:src="@drawable/drag"
+            android:visibility="gone"/>
     </RelativeLayout>
 
     <ImageView

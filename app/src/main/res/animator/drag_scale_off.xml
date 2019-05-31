@@ -3,13 +3,13 @@
     <objectAnimator
         android:propertyName="scaleX"
         android:valueTo="1f"
-        android:duration="500" />
+        android:duration="100" />
     <objectAnimator
         android:propertyName="scaleY"
         android:valueTo="1f"
-        android:duration="500" />
+        android:duration="100" />
     <objectAnimator
         android:propertyName="alpha"
         android:valueTo="1f"
-        android:duration="500" />
+        android:duration="100" />
 </set>

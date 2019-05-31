@@ -41,7 +41,7 @@ public class FirebaseViewHolder extends RecyclerView.ViewHolder implements  Item
         itemView.setOnClickListener(this);
     }
 public void bindCompanies(CompanyModel company){
-        mCompanyImage =mView.findViewById(R.id.dragMe);
+        mCompanyImage =mView.findViewById(R.id.companyImage);
     TextView nameTextView = mView.findViewById(R.id.companyNamee);
     nameTextView.setText(company.getmName());
     TextView publication = mView.findViewById(R.id.companyWebsitee);
