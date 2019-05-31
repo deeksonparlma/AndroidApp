@@ -13,6 +13,7 @@ public class Constants {
     public static final String FIREBASE_QUERY_INDEX = "index";
 //    public static final String PREFERENCES_PAGE_KEY = "page ";
 public static final String FIREBASE_JOB_SEARCHED = "jobsearch";
+    public static final String SOURCE_SAVED = "saved";
  //chat//
     public static final String ACABOT_TOKEN = BuildConfig.MUSE_TOKEN;
     public static final String ACABOT_BASE_URL = "https://acobot-brainshop-ai-v1.p.rapidapi.com/get";

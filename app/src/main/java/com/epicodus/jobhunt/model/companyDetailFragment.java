@@ -4,8 +4,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -28,6 +32,7 @@ import butterknife.ButterKnife;
 
 public class companyDetailFragment extends Fragment implements View.OnClickListener {
     private static final String ARG_PARAM1 = "param1";
+    private static final int REQUEST_IMAGE_CAPTURE = 111;
     @BindView(R.id.ts) TextView mName;
     @BindView(R.id.website) TextView web;
     @BindView(R.id.textView12) TextView location;
@@ -37,6 +42,7 @@ public class companyDetailFragment extends Fragment implements View.OnClickListe
     @BindView(R.id.tags) TextView tags;
     @BindView(R.id.save) Button mSave;
     private CompanyModel company;
+    private String mSource;
 
     public companyDetailFragment() {
     }
@@ -52,7 +58,31 @@ public class companyDetailFragment extends Fragment implements View.OnClickListe
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         company = Parcels.unwrap(getArguments().getParcelable("company"));
+        setHasOptionsMenu(true);
     }
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+            inflater.inflate(R.menu.menu_photo, menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_photo:
+                onLaunchCamera();
+            default:
+                break;
+        }
+        return false;
+    }
+    public void onLaunchCamera() {
+        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        if (takePictureIntent.resolveActivity(getActivity().getPackageManager()) != null) {
+            startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
+        }
+    }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

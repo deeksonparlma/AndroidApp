@@ -5,7 +5,8 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
-
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
     <application
         android:allowBackup="true"
         android:hardwareAccelerated="false"
@@ -14,24 +15,26 @@
         android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme.">
+        android:theme="@style/AppTheme">
         <activity android:name=".companyDetailActivity"></activity>
         <activity
             android:name=".ui.Login"
-            android:launchMode="singleTop" />
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".ui.chatActivity"
-            android:launchMode="singleTop" />
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".ui.displaySavedJobs"
             android:launchMode="singleTop" />
         <activity
             android:name=".ui.searchByJob"
-            android:launchMode="singleTop" />
-        <activity
-            android:name=".ui.searchByCompany"
             android:launchMode="singleTop"
             android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".ui.searchByCompany"
+            android:launchMode="singleTop" />
         <activity
             android:name=".ui.jobSearch"
             android:launchMode="singleTop"
@@ -46,10 +49,12 @@
 
         <activity
             android:name=".ui.HomeActivity"
-            android:launchMode="singleTop" />
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".ui.signUp"
-            android:launchMode="singleTop" />
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".ui.splashScreen"
             android:launchMode="singleTop">
@@ -61,7 +66,8 @@
         </activity>
         <activity
             android:name=".ui.MainActivity"
-            android:launchMode="singleTop">
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
