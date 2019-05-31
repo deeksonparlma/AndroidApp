@@ -104,9 +104,7 @@ public class companyDetailFragment extends Fragment implements View.OnClickListe
         String imageEncoded = Base64.encodeToString(baos.toByteArray(), Base64.DEFAULT);
         DatabaseReference ref = FirebaseDatabase.getInstance()
                 .getReference(Constants.FIREBASE_JOB_SEARCHED)
-                .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                .child(company.getPushId())
-                .child("imageUrl");
+                .child(FirebaseAuth.getInstance().getCurrentUser().getUid());
         ref.setValue(imageEncoded);
     }
 
